@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+a{ color:#0055aa}
+a:hover{ color:#f60;}
+
+/*--------------------------------
+   header  menu  footer
+ --------------------------------*/
+.text_nav{ width:960px; height:94px; margin:0 auto; margin-bottom:5px; position:relative;}
+.text_nav_logo{ width:280px; height:60px; margin-top:15px; float:left; }
+.text_nav_img { margin-left:8px; margin-right:2px;}
+
+.text_nav_text{ width:670px; float:right;}
+.text_nav_text ul{ margin-top:15px;}
+.text_nav_text li{ float:left;  width:60px; height:20px; margin-bottom:5px;}
+.text_nav_text a{ color:#90b900;padding:2px; display:block;}
+.text_nav_text a:hover{ color:#fff; background:#90b900;}
+.text_nav h2{ color:#666; font-size:14px; position:absolute; right:0; bottom:0;  }
+
+
+.menu_nav{ width:960px; margin:0 auto; background:url(/2010images/n_bg01.gif) left top repeat-x; overflow:hidden;}
+.menu_nav ul{ height:43px;  margin-left:50px;}
+.menu_nav li{ float:left; margin-right:40px; line-height:43px; font-size:14px;}
+.menu_nav a{ color:#fff;}
+.menu_nav a:hover{color:#d7effc; }
+.menu_nav .onho{ color:#d7effc;}
+
+
+/*--footer--*/
+
+.foot{ width:980px; margin:0 auto; line-height:21px; color:#666; border-top:1px solid #bbdbe5; background:#ecf3f9; text-align:center;padding-bottom:5px;}
+.foot a{ padding-left:3px; padding-right:3px; color:#20629e;}
+.foot a:hover{color:#f50;}
+.foot span{ line-height:40px;}
+
+
+/*--page_title--*/
+
+.page_title{ margin-bottom:5px;}
+.page_title h1 {line-height:40px;font-size:36px; color:#20629e;}
+.page_title p{color:#777; }
+
+
+/*--page_title--*/
+
+.page_path{ font-family: Tahoma; color:#666; margin-bottom:5px; background:#ecf3f9; line-height:25px; }
+.page_path a{ color:#20629e; margin-left:5px;margin-right:3px; padding:2px;}
+.page_path a:hover{ color:#fff; background:#509ad8;}
+
+a{ color:#20629e}
+a:hover{ color:#f60}
+
+
+/*左边切换项*/
+.cont_lef_nav{ margin-bottom:8px; width:180px; }
+.cont_lef_nav ul{ border-top:1px solid #d4d4d4;}
+.cont_lef_nav li{ display:block; width:180px; background:url(/2010images/lef_top.gif) no-repeat; line-height:31px; }
+.cont_lef_nav li span{ margin-left:10px;}
+.cont_lef_nav li a{ color:#888; line-height:31px; width:180px; display:block;}
+.cont_lef_nav li a:hover{ color:#f60; background:url(/2010images/lef_top2.gif) no-repeat; }
+.cont_lef_nav h3{ background:#509ad8;color:#fff; line-height:2.5;}
+.cont_lef_nav h3 span{ margin-left:10px;}
+
+
+/*顶部更新*/
+.topp_nav{ width:100%; line-height:25px; height:25px; background:#f8f8f8; border-bottom:1px solid #d4d4d4;}
+.top_class{ width:960px; margin:0 auto; }
+.top_class_lef{ float:right; margin-right:10px;}
+.top_class_lef em{color:#d82627;margin:0 3px;}
+.top_class_rig{ float:left; }
+.top_class_rig li{ float:left; margin:0 4px; color:#888;}
