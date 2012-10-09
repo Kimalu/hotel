@@ -16,7 +16,6 @@ public class Province {
     private String id;
     private String name;
     private boolean isHot=false;
-   // private boolean isDirectlyGovernedCity=false;  //直辖市
     private boolean isAutonomousRegion=false;  //自治区
     private boolean isSpecialAdministrativeRegion=false;  //特别行政区
     private String pinyin;			//拼音

@@ -28,9 +28,9 @@ public class Room {
 	@Column(nullable=false)
 	private float extemporePrice;  //当场价格 即门市价
 	@Column(nullable=false)
-	private float nowPrice;		 //现价
+	private float nowPrice;		 //现价 不高于门市价的优惠价格
 	@Column(nullable=false)
-	private boolean singleOrDouble;  //true is single, false is double
+	private boolean singleOrDouble;  // 单人房或双人房true is single, false is double
 	@Column(nullable=false)
 	private boolean isSupplyBreakFast;		//是否提供早餐
 	@Column(nullable=false)
@@ -41,6 +41,8 @@ public class Room {
 	private boolean faceSea=false;  //面海
 	
 	private boolean haveWindow; //是否有窗户
+	
+	private int count; //还有多少空房间
 	
 	
 
@@ -130,6 +132,14 @@ public class Room {
 
 	public void setHaveWindow(boolean haveWindow) {
 		this.haveWindow = haveWindow;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
 	}
 	
 

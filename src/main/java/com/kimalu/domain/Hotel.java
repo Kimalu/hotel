@@ -4,11 +4,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
@@ -19,15 +22,18 @@ public class Hotel {
 	@GeneratedValue(generator="hotel_uuid")
 	@GenericGenerator(name="hotel_uuid", strategy = "uuid")
 	private String id;
-	private String name;
+	@ManyToOne(fetch=FetchType.EAGER)
+	@Cascade(CascadeType.PERSIST)
+	private Brand brand;
 	private String address;
 	private String tel;
 	private String introduce;
 	private int level;//1-5 星
 	
-	private String remark; //备注
 	
-	private String imagePath;
+	//private String imagePath;
+	@ManyToOne
+	private City city;
 	
 	
 	
@@ -44,13 +50,7 @@ public class Hotel {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getAddress() {
 		return address;
@@ -84,13 +84,6 @@ public class Hotel {
 		this.level = level;
 	}
 
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
 
 	public Set<Region> getRegions() {
 		return regions;
@@ -100,12 +93,20 @@ public class Hotel {
 		this.regions = regions;
 	}
 
-	public String getImagePath() {
-		return imagePath;
+	public Brand getBrand() {
+		return brand;
 	}
 
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
+
+	public City getCity() {
+		return city;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
 	}
 
 }
