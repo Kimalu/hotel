@@ -39,18 +39,6 @@ public class Province {
 	public void setHot(boolean isHot) {
 		this.isHot = isHot;
 	}
-/*	public boolean isAdministrativeArea() {
-		return administrativeArea;
-	}
-	public void setAdministrativeArea(boolean administrativeArea) {
-		this.administrativeArea = administrativeArea;
-	}*/
-//	public boolean isDirectlyGovernedCity() {
-//		return isDirectlyGovernedCity;
-//	}
-//	public void setDirectlyGovernedCity(boolean isDirectlyGovernedCity) {
-//		this.isDirectlyGovernedCity = isDirectlyGovernedCity;
-//	}
 	public boolean isAutonomousRegion() {
 		return isAutonomousRegion;
 	}
