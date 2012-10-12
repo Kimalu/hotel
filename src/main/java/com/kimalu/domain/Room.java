@@ -12,7 +12,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import com.kimalu.domain.enumerate.HouseType;
 
-@Entity
+@Entity//房型
 public class Room {
 	@Id
 	@GeneratedValue(generator="hotel_uuid")
@@ -37,10 +37,6 @@ public class Room {
 	private int bedAmount;		//床的数量	
 	@Column(nullable=false)
 	private String roomNo;  //房间号
-	
-	private boolean faceSea=false;  //面海
-	
-	private boolean haveWindow; //是否有窗户
 	
 	private int count; //还有多少空房间
 	
@@ -125,22 +121,6 @@ public class Room {
 
 	public void setRoomNo(String roomNo) {
 		this.roomNo = roomNo;
-	}
-
-	public boolean isFaceSea() {
-		return faceSea;
-	}
-
-	public void setFaceSea(boolean faceSea) {
-		this.faceSea = faceSea;
-	}
-
-	public boolean isHaveWindow() {
-		return haveWindow;
-	}
-
-	public void setHaveWindow(boolean haveWindow) {
-		this.haveWindow = haveWindow;
 	}
 
 	public int getCount() {

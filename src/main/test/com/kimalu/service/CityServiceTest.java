@@ -19,6 +19,7 @@ public class CityServiceTest {
 		c1.setDirectlyGovernedCity(true);
 		c1.setHot(true);
 		c1.setProvince(null);
+		cityService.save(c1);
 		
 		City c2=new City();
 		c2.setName("天津");
@@ -26,6 +27,7 @@ public class CityServiceTest {
 		c2.setDirectlyGovernedCity(true);
 		c2.setHot(true);
 		c2.setProvince(null);
+		cityService.save(c2);
 		
 		City c3=new City();
 		c3.setName("上海");
@@ -33,6 +35,7 @@ public class CityServiceTest {
 		c3.setDirectlyGovernedCity(true);
 		c3.setHot(true);
 		c3.setProvince(null);
+		cityService.save(c3);
 		
 		City c4=new City();
 		c4.setName("重庆");
@@ -40,6 +43,7 @@ public class CityServiceTest {
 		c4.setDirectlyGovernedCity(true);
 		c4.setHot(true);
 		c4.setProvince(null);
+		cityService.save(c4);
 		
 		ProvinceService ps=(ProvinceService)context.getBean("provinceService");
 		Province p=ps.getProvinceByName("河北");
@@ -48,11 +52,13 @@ public class CityServiceTest {
 		c5.setName("石家庄");
 		c5.setPinyin("SHIJIAZHUANG");
 		c5.setProvince(p);
+		cityService.save(c5);
 		
 		City c6=new City();
 		c6.setName("保定");
 		c6.setPinyin("BAODING");
 		c6.setProvince(p);
+		cityService.save(c6);
 		
 		
 		

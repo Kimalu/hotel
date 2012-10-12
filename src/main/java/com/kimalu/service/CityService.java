@@ -29,6 +29,7 @@ public class CityService /*extends BaseService<City>*/{
 	public Serializable save(City t) {
 		return cityDAO.save(t);
 	}
+	
 	@Transactional
 	public List<Serializable> saveList(List<City> list) {
 		List<Serializable> idList = new ArrayList<Serializable>();
@@ -38,6 +39,7 @@ public class CityService /*extends BaseService<City>*/{
 		}
 		return idList;
 	}
+	
 	@Transactional
 	public void del(City t) {
 		cityDAO.del(t);
