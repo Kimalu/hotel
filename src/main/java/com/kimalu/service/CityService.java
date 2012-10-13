@@ -52,6 +52,10 @@ public class CityService /*extends BaseService<City>*/{
 	public void update(City t) {
 		cityDAO.update(t);
 	}
+	@Transactional
+	public List<String> getAllCityPinYin() {
+		return cityDAO.getAllCityPinYin();
+	}
 
 	
 }

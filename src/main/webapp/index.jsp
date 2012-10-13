@@ -20,34 +20,27 @@
     <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.9.0.custom.js"></script>
     <script type="text/javascript">
+    var allCityPinYin;
+    function init(){
+    	getCityPinYin();
+    }
+    
+    function getCityPinYin(){
+    	//TODO  try getJson without eval
+	   	$.post("${basePath}city/getAllCityPinYin", function(data) {
+	   		allCityPinYin=eval(data);
+	   		bindAutoComplete();
+	   	})
+    }
+    function bindAutoComplete(){
+    	$( "#h_name" ).autocomplete({
+			source: allCityPinYin
+		});
+    }
 	$(function() {
-	var availableTags = [
-	         			"ActionScript",
-	         			"AppleScript",
-	         			"Asp",
-	         			"BASIC",
-	         			"C",
-	         			"C++",
-	         			"Clojure",
-	         			"COBOL",
-	         			"ColdFusion",
-	         			"Erlang",
-	         			"Fortran",
-	         			"Groovy",
-	         			"Haskell",
-	         			"Java",
-	         			"JavaScript",
-	         			"Lisp",
-	         			"Perl",
-	         			"PHP",
-	         			"Python",
-	         			"Ruby",
-	         			"Scala",
-	         			"Scheme"
-	         		];
-	         		$( "#autocomplete" ).autocomplete({
-	         			source: availableTags
-	         		});
+		$("#smq_str_date").datepicker();
+		$("#smq_end_date").datepicker(); 
+		init();
 	});
     </script>
 </head>
@@ -355,17 +348,14 @@
                     <div class="cont_mid_simg01l"></div>
                     <div class="cont_mid_simg01r">
                     
-                    <h2 class="demoHeaders">Autocomplete</h2>
-					<div>
-						<input id="autocomplete" title="type &quot;a&quot;">
-					</div>
                         <h3>您出行的目的地是？</h3>
-
-                        <p>选择城市:</p>
-                        <input type="text" size="60" class="input_w1 bc1" name="h_name" id="h_name"/>
-                        <input type="hidden" name="h_id" id="h_id"/>
-                        <input type="hidden" name="h_name2" id="h_name2"/>
-                        <input type="hidden" name="lang" id="lang" value="0"/>
+						<div>
+	                        <p>选择城市:</p>
+	                        <input type="text" size="60" class="input_w1 bc1" name="h_name" id="h_name" title="type &quot;a&quot;"/>
+	                        <input type="hidden" name="h_id" id="h_id"/>
+	                        <input type="hidden" name="h_name2" id="h_name2"/>
+	                        <input type="hidden" name="lang" id="lang" value="0"/>
+                        </div>
                     </div>
                     <div class="clear"></div>
                 </li>
@@ -373,19 +363,10 @@
                     <div class="cont_mid_simg02l"></div>
                     <div class="cont_mid_simg02r">
                         <h3>您出行的时间是？</h3>
-
-                        <div class="checkinBox">
-                            <p>入住日期：</p>
-                            <input type='text' class='inputClassDate' id="smq_str_date" name="smq_str_date"
-                                   onclick='showCalendar("smq_str_date",false,"smq_str_date"),cancelBubble(event);'
-                                   readonly='readonly' value='2012-09-30'/>
-                        </div>
-                        <div class="checkoutBox">
-                            <p>离店日期：</p>
-                            <input type='text' class='inputClassDate' id="smq_end_date" name="smq_end_date"
-                                   onclick='showCalendar("smq_end_date",false,"smq_end_date"),cancelBubble(event);'
-                                   readonly='readonly' value='2012-10-01'/>
-                        </div>
+                         <p>入住日期：</p>
+                         <input type="text" id="smq_str_date">
+ 						<p>离店日期：</p>
+ 						<input type="text" id="smq_end_date">
                     </div>
                     <div class="clear"></div>
                 </li>
