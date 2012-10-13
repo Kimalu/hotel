@@ -1,4 +1,3 @@
-
 --省份
 insert into province (id,isautonomousregion,ishot,isspecialadministrativeregion,name,pinyin) values ('402898d73a533b98013a533b9e950000','false','false','false','河北','HEBEI');
 insert into province (id,isautonomousregion,ishot,isspecialadministrativeregion,name,pinyin) values ('402898d73a533b98013a533b9ed40001','false','false','false','山西','SHANXI');
@@ -38,9 +37,9 @@ insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab2720002','true','true','上海','SHANGHAI',NULL);
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab2720003','true','true','重庆','CHONGQING',NULL);
 --河北省
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0004','false','false','石家庄','SHIJIAZHUANG','402898d73a533b98013a533b9e950000');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0004','true','false','石家庄','SHIJIAZHUANG','402898d73a533b98013a533b9e950000');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0005','false','false','唐山','TANGSHAN','402898d73a533b98013a533b9e950000');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0006','false','false','秦皇岛','QINHUANGDAO','402898d73a533b98013a533b9e950000');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0006','true','false','秦皇岛','QINHUANGDAO','402898d73a533b98013a533b9e950000');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0007','false','false','邯郸','HANDAN','402898d73a533b98013a533b9e950000');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0008','false','false','邢台','XINGTAI','402898d73a533b98013a533b9e950000');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0009','false','false','保定','BAODING','402898d73a533b98013a533b9e950000');
@@ -62,8 +61,8 @@ insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0024','false','false','临汾','linfen','402898d73a533b98013a533b9ed40001');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0025','false','false','吕梁','lvlian','402898d73a533b98013a533b9ed40001');
 --辽宁
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0026','false','false','沈阳','shenyang','402898d73a533b98013a533b9ed40002');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0027','false','false','大连','dalian','402898d73a533b98013a533b9ed40002');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0026','true','false','沈阳','shenyang','402898d73a533b98013a533b9ed40002');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0027','true','false','大连','dalian','402898d73a533b98013a533b9ed40002');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0028','false','false','鞍山','anshan','402898d73a533b98013a533b9ed40002');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0029','false','false','抚顺','fushun','402898d73a533b98013a533b9ed40002');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0030','false','false','本溪','benxi','402898d73a533b98013a533b9ed40002');
@@ -77,8 +76,8 @@ insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0038','false','false','朝阳','chaoyang','402898d73a533b98013a533b9ed40002');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0039','false','false','葫芦岛','huludao','402898d73a533b98013a533b9ed40002');
 --吉林
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0040','false','false','长春','changchun','402898d73a533b98013a533b9ee30003');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0041','false','false','吉林','jilin','402898d73a533b98013a533b9ee30003');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0040','true','false','长春','changchun','402898d73a533b98013a533b9ee30003');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0041','true','false','吉林','jilin','402898d73a533b98013a533b9ee30003');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0042','false','false','四平','siping','402898d73a533b98013a533b9ee30003');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0043','false','false','辽源','liaoyuan','402898d73a533b98013a533b9ee30003');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0044','false','false','通化','tonghua','402898d73a533b98013a533b9ee30003');
@@ -87,7 +86,7 @@ insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0047','false','false','白城','baicheng','402898d73a533b98013a533b9ee30003');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0048','false','false','延边','yanbian','402898d73a533b98013a533b9ee30003');
 --黑龙江
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0049','false','false','哈尔滨','haerbin','402898d73a533b98013a533b9ee30004');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0049','true','false','哈尔滨','haerbin','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0050','false','false','齐齐哈尔','qiqihaer','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0051','false','false','鸡西','jixi','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0052','false','false','鹤岗','hegang','402898d73a533b98013a533b9ee30004');
@@ -96,16 +95,16 @@ insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0055','false','false','伊春','yichun','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0056','false','false','佳木斯','jiabusi','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0057','false','false','七台河','qitaihe','402898d73a533b98013a533b9ee30004');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0058','false','false','牡丹江','mudanjiang','402898d73a533b98013a533b9ee30004');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0058','true','false','牡丹江','mudanjiang','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0059','false','false','黑河','heihe','402898d73a533b98013a533b9ee30004');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0060','false','false','绥化','suihua','402898d73a533b98013a533b9ee30004');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0061','false','false','大兴安岭','daxinganling','402898d73a533b98013a533b9ee30004');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0061','true','false','大兴安岭','daxinganling','402898d73a533b98013a533b9ee30004');
 --江苏
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0062','false','false','南京','nanjing','402898d73a533b98013a533b9ee30005');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0062','true','false','南京','nanjing','402898d73a533b98013a533b9ee30005');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0063','false','false','无锡','wuxi','402898d73a533b98013a533b9ee30005');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0064','false','false','徐州','xuzhou','402898d73a533b98013a533b9ee30005');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0064','true','false','徐州','xuzhou','402898d73a533b98013a533b9ee30005');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0065','false','false','常州','changzhou','402898d73a533b98013a533b9ee30005');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0066','false','false','苏州','suzhou','402898d73a533b98013a533b9ee30005');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0066','true','false','苏州','suzhou','402898d73a533b98013a533b9ee30005');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0067','false','false','南通','nantong','402898d73a533b98013a533b9ee30005');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0068','false','false','连云港','lianyungang','402898d73a533b98013a533b9ee30005');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0069','false','false','淮安','huaian','402898d73a533b98013a533b9ee30005');
@@ -252,36 +251,144 @@ insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0202','false','false','海口','huaian','402898d73a533b98013a533b9ef3000f');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0203','false','false','三亚','huaian','402898d73a533b98013a533b9ef3000f');
 --四川
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0204','false','false','成都 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0205','false','false','自贡 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0206','false','false','攀枝花 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0207','false','false','泸州 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0208','false','false','德阳 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0209','false','false','绵阳 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0210','false','false','广元 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0211','false','false','遂宁 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0212','false','false','内江 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0213','false','false','乐山 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0214','false','false','南充 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0215','false','false','宜宾 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0216','false','false','广安 ','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0204','false','false','成都','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0205','false','false','自贡','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0206','false','false','攀枝花','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0207','false','false','泸州','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0208','false','false','德阳','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0209','false','false','绵阳','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0210','false','false','广元','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0211','false','false','遂宁','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0212','false','false','内江','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0213','false','false','乐山','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0214','false','false','南充','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0215','false','false','宜宾','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0216','false','false','广安','huaian','402898d73a533b98013a533b9ef30010');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0217','false','false','达州','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0218','false','false','眉山 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0219','false','false','雅安  ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0220','false','false','巴中  ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0221','false','false','资阳 ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0222','false','false','阿坝  ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0223','false','false','甘孜  ','huaian','402898d73a533b98013a533b9ef30010');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0224','false','false','凉山 ','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0218','false','false','眉山','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0219','false','false','雅安','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0220','false','false','巴中','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0221','false','false','资阳','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0222','false','false','阿坝','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0223','false','false','甘孜','huaian','402898d73a533b98013a533b9ef30010');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0224','false','false','凉山','huaian','402898d73a533b98013a533b9ef30010');
 --贵州
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0225','false','false','贵阳 ','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0226','false','false','六盘水 ','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0227','false','false','遵义  ','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0228','false','false','安顺  ','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0229','false','false','铜仁  ','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0230','false','false','毕节  ','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0231','false','false','黔西南   ','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0225','false','false','贵阳','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0226','false','false','六盘水','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0227','false','false','遵义','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0228','false','false','安顺','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0229','false','false','铜仁','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0230','false','false','毕节','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0231','false','false','黔西南','huaian','402898d73a533b98013a533b9ef30011');
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0232','false','false','黔东南','huaian','402898d73a533b98013a533b9ef30011');
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0233','false','false','黔南  ','huaian','402898d73a533b98013a533b9ef30011');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0233','false','false','黔南','huaian','402898d73a533b98013a533b9ef30011');
 --云南
-insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0233','false','false','黔南  ','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0234','false','false','昆明','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0235','false','false','曲靖','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0236','false','false','玉溪','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0237','false','false','保山','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0238','false','false','昭通','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0239','false','false','丽江','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0240','false','false','普洱','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0241','false','false','临沧','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0242','false','false','文山','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0243','false','false','红河','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0244','false','false','西双版纳','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0245','false','false','楚雄','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0246','false','false','大理','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0247','false','false','德宏','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0248','false','false','怒江','huaian','402898d73a533b98013a533b9f030012');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0249','false','false','迪庆','huaian','402898d73a533b98013a533b9f030012');
+--陕西
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0250','false','false','西安','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0251','false','false','铜川','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0252','false','false','宝鸡','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0253','false','false','咸阳','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0254','false','false','渭南','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0255','false','false','延安','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0256','false','false','汉中','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0257','false','false','榆林','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0258','false','false','安康','huaian','402898d73a533b98013a533b9f030013');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0259','false','false','商洛','huaian','402898d73a533b98013a533b9f030013');
+--甘肃
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0260','false','false','兰州','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0261','false','false','嘉峪关','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0262','false','false','金昌','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0263','false','false','白银','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0264','false','false','天水','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0265','false','false','武威','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0266','false','false','张掖','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0267','false','false','平凉','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0268','false','false','酒泉','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0269','false','false','庆阳','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0270','false','false','定西','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0271','false','false','陇南','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0272','false','false','临夏','huaian','402898d73a533b98013a533b9f030014');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0273','false','false','甘南','huaian','402898d73a533b98013a533b9f030014');
+--青海
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0274','false','false','西宁','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0275','false','false','海东','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0276','false','false','海北','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0277','false','false','黄南','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0278','false','false','海南','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0279','false','false','果洛','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0280','false','false','玉树','huaian','402898d73a533b98013a533b9f030015');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0281','false','false','海西','huaian','402898d73a533b98013a533b9f030015');
+--台湾
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0282','false','false','台北','huaian','402898d73a533b98013a533b9f030016');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0283','false','false','高雄','huaian','402898d73a533b98013a533b9f030016');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0284','false','false','基隆','huaian','402898d73a533b98013a533b9f030016');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0285','false','false','台中','huaian','402898d73a533b98013a533b9f030016');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0286','false','false','台南','huaian','402898d73a533b98013a533b9f030016');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0287','false','false','新竹','huaian','402898d73a533b98013a533b9f030016');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0288','false','false','嘉义','huaian','402898d73a533b98013a533b9f030016');
+--广西
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0289','false','false','南宁','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0290','false','false','柳州','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0291','false','false','桂林','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0292','false','false','梧州','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0293','false','false','北海','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0294','false','false','防城港','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0295','false','false','钦州','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0296','false','false','贵港','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0297','false','false','玉林','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0298','false','false','百色','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0299','false','false','贺州','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0300','false','false','河池','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0301','false','false','来宾','huaian','402898d73a533b98013a533b9f030018');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0302','false','false','崇左','huaian','402898d73a533b98013a533b9f030018');
+--宁夏
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0303','false','false','银川','huaian','402898d73a533b98013a533b9f030019');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0304','false','false','石嘴山','huaian','402898d73a533b98013a533b9f030019');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0305','false','false','吴忠','huaian','402898d73a533b98013a533b9f030019');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0306','false','false','固原','huaian','402898d73a533b98013a533b9f030019');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0307','false','false','中卫','huaian','402898d73a533b98013a533b9f030019');
+--新疆
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0308','false','false','乌鲁木齐','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0309','false','false','克拉玛依','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0310','false','false','吐鲁番','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0311','false','false','哈密','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0312','false','false','和田','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0313','false','false','阿克苏','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0314','false','false','喀什','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0315','false','false','克孜勒苏柯尔克孜','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0316','false','false','巴音郭楞蒙古','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0317','false','false','昌吉','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0318','false','false','博尔塔拉蒙古','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0319','false','false','伊犁哈萨克','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0320','false','false','塔城','huaian','402898d73a533b98013a533b9f03001a');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0321','false','false','阿勒泰','huaian','402898d73a533b98013a533b9f03001a');
+--西藏
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0322','false','false','拉萨 ','huaian','402898d73a533b98013a533b9f12001b');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0323','false','false','昌都','huaian','402898d73a533b98013a533b9f12001b');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0324','false','false','山南 ','huaian','402898d73a533b98013a533b9f12001b');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0325','false','false','日喀则','huaian','402898d73a533b98013a533b9f12001b');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0326','false','false','那曲 ','huaian','402898d73a533b98013a533b9f12001b');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0327','false','false','阿里','huaian','402898d73a533b98013a533b9f12001b');
+insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0328','false','false','林芝','huaian','402898d73a533b98013a533b9f12001b');
+--香港
+--insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0281','false','false','海西','huaian','402898d73a533b98013a533b9f030015');
+--澳门
+--insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0281','false','false','海西','huaian','402898d73a533b98013a533b9f030015');
+--内蒙古
+--insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab35d0289','false','false','海西','huaian','402898d73a533b98013a533b9f030017');

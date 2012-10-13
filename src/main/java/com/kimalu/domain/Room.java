@@ -7,9 +7,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
 import org.hibernate.annotations.GenericGenerator;
-
 import com.kimalu.domain.enumerate.HouseType;
 
 @Entity//房型

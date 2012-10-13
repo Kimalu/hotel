@@ -16,26 +16,54 @@
     <meta name="description"
           content="Chinahotel中国酒店预订网提供上海酒店,北京酒店,广州酒店,杭州酒店,厦门酒店,台湾酒店,自由行等全国20000多家星级酒店2-6折优惠房价及在线预订及电话预订服务.并提供旅游景点 旅游指南等多种服务"/>
     <link href="2010css/ch_index0.css" rel="stylesheet" type="text/css"/>
+    <link href="css/smoothness/jquery-ui-1.9.0.custom.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.9.0.custom.js"></script>
+    <script type="text/javascript">
+	$(function() {
+	var availableTags = [
+	         			"ActionScript",
+	         			"AppleScript",
+	         			"Asp",
+	         			"BASIC",
+	         			"C",
+	         			"C++",
+	         			"Clojure",
+	         			"COBOL",
+	         			"ColdFusion",
+	         			"Erlang",
+	         			"Fortran",
+	         			"Groovy",
+	         			"Haskell",
+	         			"Java",
+	         			"JavaScript",
+	         			"Lisp",
+	         			"Perl",
+	         			"PHP",
+	         			"Python",
+	         			"Ruby",
+	         			"Scala",
+	         			"Scheme"
+	         		];
+	         		$( "#autocomplete" ).autocomplete({
+	         			source: availableTags
+	         		});
+	});
+    </script>
 </head>
 <body>
-
-
 <div class="topp_nav">
     <div class="top_class">
-
         <div class="top_class_lef">
             <p><em>订房热线:</em>400-889-9093(免长话费),<em>预订电话:</em> 0592-5199895</p>
         </div>
-
         <div class="top_class_rig">
             <ul>
                 <li><a href="/help/about.html" rel="nofollow">关于我们</a></li>
                 <li><a href="/map.html">网站导航</a></li>
                 <li><a href="http://tw.chinahotel.com.cn/chinahotels_login.php" rel="nofollow">会员注册</a></li>
             </ul>
-
         </div>
-
         <div class="clear"></div>
     </div>
 </div>
@@ -112,6 +140,7 @@
                     广西酒店</a>
             </li>
         </ul>
+        
         <ul>
             <li>
                 <a href="http://hunan.chinahotel.com.cn/" rel="nofollow">
@@ -325,6 +354,11 @@
                 <li>
                     <div class="cont_mid_simg01l"></div>
                     <div class="cont_mid_simg01r">
+                    
+                    <h2 class="demoHeaders">Autocomplete</h2>
+					<div>
+						<input id="autocomplete" title="type &quot;a&quot;">
+					</div>
                         <h3>您出行的目的地是？</h3>
 
                         <p>选择城市:</p>
