@@ -197,7 +197,6 @@
         <li><a href="/Xiamen-Hotels.html">厦门酒店</a></li>
         <li><a href="/chinahotels_tehui.php">特惠酒店</a></li>
         <li><a href="/China-Destinations.html">旅游目的地</a></li>
-
     </ul>
 </div>
 <!--
