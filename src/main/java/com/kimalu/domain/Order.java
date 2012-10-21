@@ -16,18 +16,24 @@ public class Order {
 	private String id;
 	private Date beginDate;
 	private Date endDate;
+	
 	private int orderCount;  //预订的房间数
 	
 	
 	private boolean isCreditGuarantee=false;    //是否信用卡担保
-	private String orderName;
+	private String orderNo;					//订单号
 	private String creditCardNo;			//信用卡号
 	private String creditCardBackNo;		//信用卡背后尾数
 	private Integer effectMonth;			//有效月份
 	private Integer effectYear;				//有效年份
 	private String cardCertificateNo;		//办卡的有效证件号  一般可能就身份证号
+	private Date createDate;
+	
+	private String email;
 	
 	private String remark;			//备注
+	
+	private boolean isFinished=false;
 	
 	@OneToOne
 	@JoinColumn(name = "roomId") 
@@ -84,13 +90,6 @@ public class Order {
 		this.isCreditGuarantee = isCreditGuarantee;
 	}
 
-	public String getOrderName() {
-		return orderName;
-	}
-
-	public void setOrderName(String orderName) {
-		this.orderName = orderName;
-	}
 
 	public String getCreditCardNo() {
 		return creditCardNo;
@@ -138,6 +137,38 @@ public class Order {
 
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+
+	public boolean isFinished() {
+		return isFinished;
+	}
+
+	public void setFinished(boolean isFinished) {
+		this.isFinished = isFinished;
+	}
+
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

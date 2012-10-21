@@ -9,6 +9,11 @@ public class WelcomeController {
 
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String index(){
-		return "index";
+		return "front/index";
+	}
+	
+	@RequestMapping(value="/admin",method=RequestMethod.GET)
+	public String adminIndex(){
+		return "admin/login";
 	}
 }

@@ -38,7 +38,7 @@ public class Room {
 	
 	private int count; //还有多少空房间
 	
-	private int totalCount;	//改类型房间的总数
+	private int totalCount;	//该类型房间的总数
 	
 
 	public int getTotalCount() {

@@ -35,6 +35,6 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
  
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		p:prefix="/" p:suffix=".jsp" />
+		p:prefix="/jsp/" p:suffix=".jsp" />
 
 </beans>
