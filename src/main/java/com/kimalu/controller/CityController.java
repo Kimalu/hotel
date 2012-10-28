@@ -20,7 +20,7 @@ public class CityController extends BaseController {
 	@Autowired
 	private CityService cityService;
 	
-	@RequestMapping(value="/getAllCityPinYin",method=RequestMethod.POST)
+    @RequestMapping(value="/getAllCityPinYin",method=RequestMethod.POST)
 	@ResponseBody
 	public String getAllCityPinYin() throws JsonGenerationException, JsonMappingException, IOException{
 		List<String> allCityPinYin=cityService.getAllCityPinYin();

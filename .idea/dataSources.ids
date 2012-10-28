@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="hotel" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="99b00166-a1d9-4c3f-8159-bc0662baab7d">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql://localhost:5432/hotel</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>df9bdf98df99</user-password>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.0-801.jdbc4/postgresql-9.0-801.jdbc4.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

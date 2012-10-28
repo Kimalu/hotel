@@ -13,8 +13,10 @@ public class Brand { //品牌 如：7天连锁酒店，如家快捷酒店
 	@GeneratedValue(generator="hotel_uuid")
 	@GenericGenerator(name="hotel_uuid", strategy = "uuid")
 	private String id;
-	private String name; 
-	@Column(nullable=false)
+	private String name;
+
+    private String pinyin;
+    @Column(nullable=false)
 	private float grade;  //评分  用来对酒店品牌进行排行    需要一种算法 来计算  如果提供会员注册，那么会员可以给予评分 如果没有评分，那么设定重复选该酒店的分值
 	private String discription;
 	

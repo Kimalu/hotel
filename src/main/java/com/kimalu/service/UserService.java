@@ -5,13 +5,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.kimalu.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kimalu.dao.CityDAO;
 import com.kimalu.dao.UserDAO;
-import com.kimalu.domain.AdminUser;
 
 @Service
 public class UserService /*extends BaseService<City>*/{
@@ -19,30 +18,30 @@ public class UserService /*extends BaseService<City>*/{
 	private UserDAO userDAO;
 
 	@Transactional
-	public Serializable save(AdminUser t) {
+	public Serializable save(User t) {
 		return userDAO.save(t);
 	}
 	
 	@Transactional
-	public List<Serializable> saveList(List<AdminUser> list) {
+	public List<Serializable> saveList(List<User> list) {
 		List<Serializable> idList = new ArrayList<Serializable>();
-		for (Iterator<AdminUser> iterator = list.iterator(); iterator.hasNext();) {
-			AdminUser entity = (AdminUser) iterator.next();
+		for (Iterator<User> iterator = list.iterator(); iterator.hasNext();) {
+			User entity = (User) iterator.next();
 			idList.add(userDAO.save(entity));
 		}
 		return idList;
 	}
 	
 	@Transactional
-	public void del(AdminUser t) {
+	public void del(User t) {
 		userDAO.del(t);
 	}
 	@Transactional
-	public AdminUser getEntityById(Serializable id) {
+	public User getEntityById(Serializable id) {
 		return userDAO.getEntityById(id);
 	}
 	@Transactional
-	public void update(AdminUser t) {
+	public void update(User t) {
 		userDAO.update(t);
 	}
 

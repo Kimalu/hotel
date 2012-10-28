@@ -1,11 +1,10 @@
 package com.kimalu.dao;
 
+import com.kimalu.domain.User;
 import org.springframework.stereotype.Repository;
 
-import com.kimalu.domain.Hotel;
-import com.kimalu.domain.AdminUser;
 @Repository
-public class UserDAO extends BaseDAO<AdminUser> {
+public class UserDAO extends BaseDAO<User> {
 	
 	
 

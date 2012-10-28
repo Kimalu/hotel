@@ -30,6 +30,7 @@ insert into province (id,isautonomousregion,ishot,isspecialadministrativeregion,
 insert into province (id,isautonomousregion,ishot,isspecialadministrativeregion,name,pinyin) values ('402898d73a533b98013a533b9f12001c','false','false','true','香港','XIANGGANG');
 insert into province (id,isautonomousregion,ishot,isspecialadministrativeregion,name,pinyin) values ('402898d73a533b98013a533b9f12001d','false','false','true','澳门','AOMEN');
 
+
 --城市
 
 insert into city (id,ishot,isdirectlygovernedcity,name,pinyin,province_id)values('402898d73a534aac013a534ab2430000','true','true','北京','BEIJING',NULL);

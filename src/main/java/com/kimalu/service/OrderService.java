@@ -13,42 +13,45 @@ import com.kimalu.dao.OrderDAO;
 import com.kimalu.domain.Order;
 
 @Service
-public class OrderService /*extends BaseService<Order>*/{
-	@Autowired
-	private OrderDAO orderDAO;
+public class OrderService /*extends BaseService<Order>*/ {
+    @Autowired
+    private OrderDAO orderDAO;
 
-	
-	@Transactional
-	public Serializable save(Order t) {
-		return orderDAO.save(t);
-	}
-	
-	@Transactional
-	public List<Serializable> saveList(List<Order> list) {
-		List<Serializable> idList = new ArrayList<Serializable>();
-		for (Iterator<Order> iterator = list.iterator(); iterator.hasNext();) {
-			Order entity = (Order) iterator.next();
-			idList.add(orderDAO.save(entity));
-		}
-		return idList;
-	}
-	
-	@Transactional
-	public void del(Order t) {
-		orderDAO.del(t);
-	}
-	@Transactional
-	public Order getEntityById(Serializable id) {
-		return orderDAO.getEntityById(id);
-	}
-	@Transactional
-	public void update(Order t) {
-		orderDAO.update(t);
-	}
 
-	public List<Order> getAllOutstandingOrderList() {
-		return null;
-	}
+    @Transactional
+    public Serializable save(Order t) {
+        return orderDAO.save(t);
+    }
 
-	
+    @Transactional
+    public List<Serializable> saveList(List<Order> list) {
+        List<Serializable> idList = new ArrayList<Serializable>();
+        for (Iterator<Order> iterator = list.iterator(); iterator.hasNext(); ) {
+            Order entity = (Order) iterator.next();
+            idList.add(orderDAO.save(entity));
+        }
+        return idList;
+    }
+
+    @Transactional
+    public void del(Order t) {
+        orderDAO.del(t);
+    }
+
+    @Transactional
+    public Order getEntityById(Serializable id) {
+        return orderDAO.getEntityById(id);
+    }
+
+    @Transactional
+    public void update(Order t) {
+        orderDAO.update(t);
+    }
+
+    @Transactional
+    public List<Order> getAllOutstandingOrderList() {
+        return orderDAO.getAllOutstandingOrderList();
+    }
+
+
 }

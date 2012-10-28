@@ -14,12 +14,23 @@ public class Hotel {
 	@GeneratedValue(generator="hotel_uuid")
 	@GenericGenerator(name="hotel_uuid", strategy = "uuid")
 	private String id;
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne
 	private Brand brand;
 	private String address;
 	private String tel;
 	private String introduce;
 	private int level;//1-5 星
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;  //如：如家快捷酒店厦门分店
 	
 	
 	@ManyToOne

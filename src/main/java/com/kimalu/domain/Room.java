@@ -32,8 +32,8 @@ public class Room {
 	@Column(nullable=false)
 	private boolean isSupplyBreakFast;		//是否提供早餐
 	@Column(nullable=false)
-	private int bedAmount;		//床的数量	
-	@Column(nullable=false)
+	private int bedAmount;		//床的数量
+
 	private String roomNo;  //房间号
 	
 	private int count; //还有多少空房间

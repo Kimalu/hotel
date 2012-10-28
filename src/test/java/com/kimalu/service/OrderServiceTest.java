@@ -1,68 +1,88 @@
 package com.kimalu.service;
 
+import com.kimalu.domain.*;
+import com.kimalu.domain.enumerate.HouseType;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.kimalu.domain.City;
-import com.kimalu.domain.Province;
+import java.util.Date;
 
 public class OrderServiceTest {
-	@Test
-	public void testSaveProvince(){
-		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-		CityService cityService=(CityService)context.getBean("cityService");
-		
-		City c1=new City();
-		c1.setName("北京");
-		c1.setPinyin("BEIJING");
-		c1.setDirectlyGovernedCity(true);
-		c1.setHot(true);
-		c1.setProvince(null);
-		cityService.save(c1);
-		
-		City c2=new City();
-		c2.setName("天津");
-		c2.setPinyin("TIANJIN");
-		c2.setDirectlyGovernedCity(true);
-		c2.setHot(true);
-		c2.setProvince(null);
-		cityService.save(c2);
-		
-		City c3=new City();
-		c3.setName("上海");
-		c3.setPinyin("SHANGHAI");
-		c3.setDirectlyGovernedCity(true);
-		c3.setHot(true);
-		c3.setProvince(null);
-		cityService.save(c3);
-		
-		City c4=new City();
-		c4.setName("重庆");
-		c4.setPinyin("CHONGQING");
-		c4.setDirectlyGovernedCity(true);
-		c4.setHot(true);
-		c4.setProvince(null);
-		cityService.save(c4);
-		
-		ProvinceService ps=(ProvinceService)context.getBean("provinceService");
-		Province p=ps.getProvinceByName("河北");
+    @Test
+    public void testSaveOrder() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext_test.xml");
+        OrderService orderService = (OrderService) context.getBean("orderService");
+        CityService cityService = (CityService) context.getBean("cityService");
+        HotelService hotelService = (HotelService) context.getBean("hotelService");
+        BrandService brandService=(BrandService) context.getBean("brandService");
+        RoomService roomService=(RoomService) context.getBean("roomService");
+        RegionService regionService=(RegionService) context.getBean("regionService");
 
-		City c5=new City();
-		c5.setName("石家庄");
-		c5.setPinyin("SHIJIAZHUANG");
-		c5.setProvince(p);
-		cityService.save(c5);
-		
-		City c6=new City();
-		c6.setName("保定");
-		c6.setPinyin("BAODING");
-		c6.setProvince(p);
-		cityService.save(c6);
-		
-		
-		
-		
-	}
+        City city = cityService.getEntityById("402898d73a534aac013a534ab35d0006");
+
+
+        Brand brand = new Brand();
+        brand.setDiscription("如家酒店，地球人都知道");
+        brand.setGrade(9.8F);
+        brand.setName("如家快捷酒店");
+        brandService.save(brand);
+
+        Region region = new Region();
+        region.setCity(city);
+        regionService.save(region);
+
+        Hotel hotel = new Hotel();
+        hotel.setAddress("仙岳路297号");
+        hotel.setBrand(brand);
+        hotel.setName("如家厦门店");
+        hotel.setIntroduce("没什么好说的");
+        hotel.setLevel(5);
+        hotel.setRegion(region);
+        hotel.setTel("13600000000");
+
+        hotelService.save(hotel);
+
+
+
+        Room room = new Room();
+        room.setBedAmount(2);
+        room.setCount(20);
+        room.setExtemporePrice(400);
+        room.setHotel(hotel);
+        room.setHouseType(HouseType.cheapness);
+        room.setNowPrice(300);
+        room.setSingleOrDouble(false);
+        room.setSupplyBreakFast(true);
+        room.setTotalCount(30);
+
+        roomService.save(room);
+
+        Order order = new Order();
+        order.setBeginDate(new Date());
+        order.setEndDate(new Date());
+        order.setCardCertificateNo("4999555566661111");
+        order.setCreateDate(new Date());
+        order.setCreditGuarantee(true);
+        order.setEmail("zlf112358@163.com");
+        order.setEffectMonth(6);
+        order.setEffectYear(2013);
+        order.setFinished(false);
+        order.setCreditCardBackNo("000");
+        order.setOrderCount(3);
+        order.setOrderNo("001201201210210");
+        order.setRemark("test order");
+        order.setRoom(room);
+        order.setCityName(city.getName());
+        order.setProvinceName(city.getProvince().getName());
+        order.setHotelName(hotel.getName());
+        order.setRegionName(region.getName());
+        order.setOrderPersonName("Kimalu");
+        order.setOrderPersonTel("13600000000");
+
+
+        orderService.save(order);
+
+    }
 
 }

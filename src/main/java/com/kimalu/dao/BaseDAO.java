@@ -103,10 +103,14 @@ public class BaseDAO<T> {
 	}
 	
 	public List<T> getList(String hql,Object... values ){
-		Assert.hasText(hql, "queryString不能为空");
-		Query query =createQuery(hql,values);
-		return (List<T>) query.list();
-	}
+        Assert.hasText(hql, "queryString不能为空");
+        Query query =createQuery(hql,values);
+        return (List<T>) query.list();
+    }
+
+    public List<T> getList(String hql,List values ){
+        return (List<T>)this.getList(hql,values.toArray());
+    }
 	
 	public T getUnique(String hql,Object...values ){
 		Assert.hasText(hql, "queryString不能为空");

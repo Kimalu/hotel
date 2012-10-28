@@ -3,13 +3,7 @@ package com.kimalu.domain;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
@@ -26,10 +20,8 @@ public class Region {
     @ManyToOne
     private City city;
     
-	@ManyToMany
-	@JoinTable(name = "region_hotel", joinColumns = @JoinColumn(name = "regionId"), inverseJoinColumns = @JoinColumn(name = "hotelId"))
-	@Cascade(value = CascadeType.SAVE_UPDATE)
-    private Set<Hotel> hotels=new HashSet<Hotel>(); 
+	@OneToMany(mappedBy = "region")
+    private Set<Hotel> hotels=new HashSet<Hotel>();
     
     
 	public String getId() {

@@ -26,7 +26,7 @@ public class OrderController extends BaseController {
 	@RequestMapping(value="/outstandingList",method=RequestMethod.GET)
 	public String outstandingList(ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException{
 		List<Order> allOutstandingOrderList=orderService.getAllOutstandingOrderList();
-		modelMap.addAttribute("List", allOutstandingOrderList);
+		modelMap.addAttribute("list", allOutstandingOrderList);
 		return "admin/order/order_maint";
 	}
 }

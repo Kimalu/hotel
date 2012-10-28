@@ -57,5 +57,8 @@ public class CityService /*extends BaseService<City>*/{
 		return cityDAO.getAllCityPinYin();
 	}
 
-	
+
+    public City getCityByPinYin(String cityPinYin) {
+        return null;
+    }
 }

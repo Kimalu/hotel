@@ -1,8 +1,8 @@
 package com.kimalu.controller;
 
-import java.io.IOException;
-import java.util.List;
-
+import com.kimalu.domain.Region;
+import com.kimalu.service.CityService;
+import com.kimalu.service.RegionService;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,20 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.kimalu.service.CityService;
+import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/city")
 public class RegionController extends BaseController {
 	
 	@Autowired
-	private CityService cityService;
+	private RegionService regionService;
 	
-	@RequestMapping(value="/getAllCityPinYin",method=RequestMethod.POST)
+	@RequestMapping(value="/getRegionPinYinByCity",method=RequestMethod.POST)
 	@ResponseBody
-	public String getAllCityPinYin() throws JsonGenerationException, JsonMappingException, IOException{
-		List<String> allCityPinYin=cityService.getAllCityPinYin();
-		String result=toJson(allCityPinYin);
+	public String getRegionPinYinByCity(String cityNamePinYin) throws JsonGenerationException, JsonMappingException, IOException{
+		List<Region> allRegion=regionService.getRegionsByCity(cityNamePinYin);
+		String result=toJson(allRegion);
 		return result;
 	}
 }
