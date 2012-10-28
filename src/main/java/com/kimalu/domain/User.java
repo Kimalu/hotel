@@ -3,11 +3,13 @@ package com.kimalu.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class AdminUser {
+@Table(name="hotel_user")
+public class User {
 	@Id
 	@GeneratedValue(generator="hotel_uuid")
 	@GenericGenerator(name="hotel_uuid", strategy = "uuid")
