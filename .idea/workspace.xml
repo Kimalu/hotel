@@ -136,19 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="readme.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kimalu/controller/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="20" selection-start="211" selection-end="211" vertical-scroll-proportion="0.2223667">
+            <state line="1" column="24" selection-start="30" selection-end="31" vertical-scroll-proportion="0.024707412">
               <folding />
             </state>
           </provider>
@@ -929,14 +920,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kimalu/controller/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="211" selection-end="211" vertical-scroll-proportion="0.2223667">
+        <state line="1" column="24" selection-start="30" selection-end="31" vertical-scroll-proportion="0.024707412">
           <folding />
         </state>
       </provider>
