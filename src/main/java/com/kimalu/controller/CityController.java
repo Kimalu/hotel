@@ -26,9 +26,6 @@ public class CityController extends BaseController {
     @RequestMapping(value="/getAllCityPinYin",method=RequestMethod.POST)
     @ResponseBody
     public String getAllCityPinYin() throws JsonGenerationException, JsonMappingException, IOException{
-//		List<String> allCityPinYin=cityService.getAllCityPinYin();
-//		String result=toJson(allCityPinYin);
-//		return result;
         List<SearchCityDTO> cityDTOList=new ArrayList<SearchCityDTO>();
         List<City> allCityList=cityService.getAllCity();
         for (Iterator<City> iterator = allCityList.iterator(); iterator.hasNext(); ) {

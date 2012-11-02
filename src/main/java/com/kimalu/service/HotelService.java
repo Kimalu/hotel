@@ -18,41 +18,44 @@ import java.util.Iterator;
 import java.util.List;
 
 @Service
-public class HotelService /*extends BaseService<Hotel>*/{
-	@Autowired
-	private HotelDAO hotelDAO;
+public class HotelService /*extends BaseService<Hotel>*/ {
+    @Autowired
+    private HotelDAO hotelDAO;
     @Autowired
     private RegionDAO regionDAO;
 
-	HotelDAO getHotelDAO() {
-		return hotelDAO;
-	}
+    HotelDAO getHotelDAO() {
+        return hotelDAO;
+    }
 
-	void setHotelDAO(HotelDAO hotelDAO) {
-		this.hotelDAO = hotelDAO;
-	}
+    void setHotelDAO(HotelDAO hotelDAO) {
+        this.hotelDAO = hotelDAO;
+    }
+
     @Transactional
-    public void save(Hotel hotel){
+    public void save(Hotel hotel) {
         hotelDAO.save(hotel);
     }
+
     @Transactional
-    public List<Hotel> getHotel(String hotelPinYin,List<Region> regionList) {
-        Assert.notEmpty(regionList,"");
-        if (regionList.size()==1){
-            return  hotelDAO.getHotel(hotelPinYin, regionList.get(0));
-        }else{
-            return hotelDAO.getHotel(hotelPinYin,regionList);
+    public List<Hotel> getHotel(String hotelPinYin, List<Region> regionList) {
+        //Assert.notEmpty(regionList, "");
+        if(regionList.isEmpty()){
+            return new ArrayList<Hotel>();
+        }
+        if (regionList.size() == 1) {
+            return hotelDAO.getHotel(hotelPinYin, regionList.get(0));
+        } else {
+            return hotelDAO.getHotel(hotelPinYin, regionList);
         }
 
     }
+
     @Transactional
     public List<Hotel> getHotel(String hotelPinYin, City city) {
-        List<Hotel> hotelList=new ArrayList<Hotel>();
-        List<Region> regionList=regionDAO.getRegionsByCity(city);
-//        for(Iterator<Region> iterator=regionList.iterator();iterator.hasNext();){
-//                Region region=iterator.next();
-            hotelList.addAll(this.getHotel(hotelPinYin,regionList));
-//        }
+        List<Hotel> hotelList = new ArrayList<Hotel>();
+        List<Region> regionList = regionDAO.getRegionsByCity(city);
+        hotelList.addAll(this.getHotel(hotelPinYin, regionList));
         return hotelList;
     }
 }

@@ -54,7 +54,6 @@
             //TODO  try getJson without eval
 
             $.post("${basePath}city/getAllCityPinYin", function (data) {
-                alert(data);
                 allCityPinYin = eval(data);
                 /*    catcomplete            allCityPinYin=[
                  { id: "anders", value:"shanghai",category: "" },
@@ -72,11 +71,11 @@
         }
         function bindAutoComplete() {
             //后面需要改写成有分类的 category
-            $("#h_name").autocomplete({
-                //   $("#h_name").catcomplete({
+            $("#cityPinyin").autocomplete({
+                //   $("#cityPinyin").catcomplete({
                 source:allCityPinYin,
                 /* focus:function( event, ui ) {
-                 $( "#h_name" ).change();
+                 $( "#cityPinyin" ).change();
                  },*/
                 select:function (event, ui) {
                     $('#cityId').val(ui.item.id);
@@ -108,7 +107,7 @@
         });
 
         function submit_for() {
-            alert($('#cityId').val());
+
         }
 
 
@@ -189,7 +188,7 @@
                 <div class="search_tab">
 
                     <div class="cont_mid_search">
-                        <form name="sysform_smq" method="get" id="sysform_smq" action="${basePath}">
+                        <form name="sysform_smq" method="post" id="sysform_smq" action="${basePath}hotel/searchHotelByCityAndPinyin">
                             <input type="hidden" name="select5" value="1"/>
                             <h4><span>酒店预订查询</span></h4>
                             <ul>
@@ -201,7 +200,7 @@
 
                                         <div>
                                             <p>选择城市:</p>
-                                            <input type="text" size="60" class="input_w1 bc1" name="h_name" id="h_name"
+                                            <input type="text" size="60" class="input_w1 bc1" name="cityPinyin" id="cityPinyin"
                                                    title="type &quot;a&quot;"/>
                                             <input type="hidden" name="cityId" id="cityId"/>
                                         </div>
@@ -230,14 +229,14 @@
                                         <h3>您心中理想的酒店是？ （可选填）</h3>
 
                                         <p> 酒店名称:</p>
-                                        <input type="text" id="has14_hotel_name" name="has14_hotel_name" size="60"/>
+                                        <input type="text" id="hotelPinyin" name="hotelPinyin" size="60"/>
                                     </div>
                                     <div class='clear'></div>
                                     <div class="clear"></div>
                                 </li>
                             </ul>
                             <div class="ser_bton"><span class="ser_bspan">
-                <input type="button" value="查询酒店" onclick="submit_for()"/>
+                <input type="submit" value="查询酒店"  <%--onclick="submit_for()"--%>/>
             </span>
                             </div>
                         </form>

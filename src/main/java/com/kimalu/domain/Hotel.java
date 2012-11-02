@@ -21,6 +21,16 @@ public class Hotel {
 	private String introduce;
 	private int level;//1-5 星
 
+    private String pinyin;
+
+    public String getPinyin() {
+        return pinyin;
+    }
+
+    public void setPinyin(String pinyin) {
+        this.pinyin = pinyin;
+    }
+
 
     public String getName() {
         return name;

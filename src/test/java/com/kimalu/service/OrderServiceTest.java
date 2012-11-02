@@ -33,7 +33,7 @@ public class OrderServiceTest {
         regionService.save(region);
 
         Hotel hotel = new Hotel();
-        hotel.setAddress("仙岳路297号");
+        hotel.setAddress("火星路297号");
         hotel.setBrand(brand);
         hotel.setName("如家厦门店");
         hotel.setIntroduce("没什么好说的");

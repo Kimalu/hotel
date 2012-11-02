@@ -28,17 +28,12 @@ public class HotelController extends BaseController {
     @Autowired
     private CityService cityService;
 
-    @RequestMapping(value = "/searchHotelByCity", method = RequestMethod.GET)
-    public String searchHotelByCity(String cityPinYin, String hotelPinYin, ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException {
-        City city=null;
-        List<Hotel> hotelList=new ArrayList<Hotel>();
-        if(StringUtils.isEmpty(cityPinYin)) {
-            city=cityService.getCityByPinYin(cityPinYin);
-        }
-        if(StringUtils.isEmpty(hotelPinYin)) {
-            hotelList.addAll(hotelService.getHotel(hotelPinYin, city));
-        }
-
-        return "admin/order/order_maint";
+    @RequestMapping(value = "/searchHotelByCityAndPinyin", method = RequestMethod.POST)
+    public String searchHotelByCityAndPinyin(String cityId, String hotelPinYin, ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException {
+        City city = cityService.getEntityById(cityId);
+        List<Hotel> hotelList = new ArrayList<Hotel>();
+        hotelList.addAll(hotelService.getHotel(hotelPinYin, city));
+        modelMap.addAttribute("hotelList", hotelList);
+        return "front/hotelList";
     }
 }

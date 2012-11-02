@@ -37,8 +37,8 @@ public class HotelDAO extends BaseDAO<Hotel> {
         StringBuffer hql = new StringBuffer(" from Hotel h where h.region.id in ? ");
         param.add(regionsIdList);
         if (!StringUtils.isEmpty(hotelPinYin)) {
-            hql.append(" and h.brand.pinyin= ? ");
-            param.add(hotelPinYin);
+            hql.append(" and h.brand.pinyin like ? ");
+            param.add("%"+hotelPinYin+"%");
         }
         return this.getList(hql.toString(), param);
     }
