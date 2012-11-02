@@ -54,6 +54,7 @@
             //TODO  try getJson without eval
 
             $.post("${basePath}city/getAllCityPinYin", function (data) {
+                alert(data);
                 allCityPinYin = eval(data);
                 /*    catcomplete            allCityPinYin=[
                  { id: "anders", value:"shanghai",category: "" },

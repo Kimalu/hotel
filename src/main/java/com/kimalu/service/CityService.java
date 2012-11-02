@@ -61,4 +61,8 @@ public class CityService /*extends BaseService<City>*/{
     public City getCityByPinYin(String cityPinYin) {
         return null;
     }
+     @Transactional
+    public List<City> getAllCity() {
+        return cityDAO.getAllCity();
+    }
 }

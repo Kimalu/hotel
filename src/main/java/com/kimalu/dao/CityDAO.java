@@ -24,4 +24,8 @@ public class CityDAO extends BaseDAO<City> {
         return this.getUnique(hql.toString(),cityNamePinYin);
     }
 
+    public List<City> getAllCity() {
+        StringBuffer hql=new StringBuffer(" from City c ");
+        return this.getList(hql.toString());
+    }
 }
