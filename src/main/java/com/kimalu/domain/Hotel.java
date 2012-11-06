@@ -18,8 +18,8 @@ public class Hotel {
 	private Brand brand;
 	private String address;
 	private String tel;
-	private String introduce;
-	private int level;//1-5 星
+    private String introduce;
+    private int level;//1-5 星
 
     private String pinyin;
 
