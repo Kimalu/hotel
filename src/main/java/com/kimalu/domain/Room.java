@@ -18,10 +18,10 @@ public class Room {
 	private String id;
 	
 	@Column(nullable=false)
-	@Enumerated(EnumType.ORDINAL)
-	private HouseType houseType=HouseType.normal;  //房型 默认普通
-	
-	@ManyToOne
+    @Enumerated(EnumType.ORDINAL)
+    private HouseType houseType=HouseType.normal;  //房型 默认普通
+
+    @ManyToOne
 	private Hotel hotel;
 	@Column(nullable=false)
 	private float extemporePrice;  //当场价格 即门市价
