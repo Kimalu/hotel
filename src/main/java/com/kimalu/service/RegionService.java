@@ -34,4 +34,10 @@ public class RegionService {
         City city=cityDAO.getCityByPinYin(cityNamePinYin);
         return regionDAO.getRegionsByCity(city);
     }
+      @Transactional
+    public List<Region> getRegionsByCityId(String cityId) {
+        return regionDAO.getRegionsByCityId(cityId);
+    }
+
+
 }

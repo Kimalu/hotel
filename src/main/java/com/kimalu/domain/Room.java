@@ -28,15 +28,12 @@ public class Room {
 	@Column(nullable=false)
 	private float nowPrice;		 //现价 不高于门市价的优惠价格
 	@Column(nullable=false)
-	private boolean singleOrDouble;  // 单人房或双人房true is single, false is double
-	@Column(nullable=false)
 	private boolean isSupplyBreakFast;		//是否提供早餐
 	@Column(nullable=false)
 	private int bedAmount;		//床的数量
 
-	private String roomNo;  //房间号
-	
-	private int count; //还有多少空房间
+
+	private int currentIdleCount; //还有多少空房间
 	
 	private int totalCount;	//该类型房间的总数
 	
@@ -89,13 +86,6 @@ public class Room {
 		this.nowPrice = nowPrice;
 	}
 
-	public boolean isSingleOrDouble() {
-		return singleOrDouble;
-	}
-
-	public void setSingleOrDouble(boolean singleOrDouble) {
-		this.singleOrDouble = singleOrDouble;
-	}
 
 	public boolean isSupplyBreakFast() {
 		return isSupplyBreakFast;
@@ -113,21 +103,6 @@ public class Room {
 		this.bedAmount = bedAmount;
 	}
 
-	public String getRoomNo() {
-		return roomNo;
-	}
 
-	public void setRoomNo(String roomNo) {
-		this.roomNo = roomNo;
-	}
-
-	public int getCount() {
-		return count;
-	}
-
-	public void setCount(int count) {
-		this.count = count;
-	}
-	
 
 }

@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import com.kimalu.domain.i18n.Name;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
@@ -16,25 +17,25 @@ public class Region {
 	@GeneratedValue(generator="hotel_uuid")
 	@GenericGenerator(name="hotel_uuid", strategy = "uuid")
     private String id;
-    private String name;
+    @OneToOne(fetch = FetchType.EAGER, cascade = javax.persistence.CascadeType.ALL)
+    @JoinColumn(name = "name_id")
+    private Name name;
     @ManyToOne
     private City city;
-    
-	@OneToMany(mappedBy = "region")
-    private Set<Hotel> hotels=new HashSet<Hotel>();
-    
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
+    }
     
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
 	}
 	public City getCity() {
 		return city;
@@ -43,10 +44,4 @@ public class Region {
 		this.city = city;
 	}
 	
-	public Set<Hotel> getHotels() {
-		return hotels;
-	}
-	public void setHotels(Set<Hotel> hotels) {
-		this.hotels = hotels;
-	}
 }

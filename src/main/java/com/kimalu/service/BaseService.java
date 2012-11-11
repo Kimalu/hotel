@@ -24,8 +24,8 @@ public class BaseService<T> {
 		baseDAO.saveList(list);
 	}
 	
-	public void del(T t){
-		baseDAO.del(t);
+	public void delete(T t){
+		baseDAO.delete(t);
 	}
 	
 }

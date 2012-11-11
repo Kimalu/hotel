@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,5 +31,14 @@ public class BrandService {
     @Transactional
     public Serializable save(Brand t) {
         return brandDAO.save(t);
+    }
+
+    @Transactional
+    public Brand getUniqueNameChs(String chs){
+        return brandDAO.getUniqueNameChs(chs);
+    }
+    @Transactional
+    public List<Brand> getAllBrand() {
+        return brandDAO.getList();
     }
 }

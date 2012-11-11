@@ -34,8 +34,8 @@ public class OrderService /*extends BaseService<Order>*/ {
     }
 
     @Transactional
-    public void del(Order t) {
-        orderDAO.del(t);
+    public void delete(Order t) {
+        orderDAO.delete(t);
     }
 
     @Transactional

@@ -14,55 +14,63 @@ import com.kimalu.domain.City;
 
 @Service
 public class CityService /*extends BaseService<City>*/{
-	@Autowired
-	private CityDAO cityDAO;
+    @Autowired
+    private CityDAO cityDAO;
 
-	CityDAO getCityDAO() {
-		return cityDAO;
-	}
+    CityDAO getCityDAO() {
+        return cityDAO;
+    }
 
-	void setCityDAO(CityDAO cityDAO) {
-		this.cityDAO = cityDAO;
-	}
-	
-	@Transactional
-	public Serializable save(City t) {
-		return cityDAO.save(t);
-	}
-	
-	@Transactional
-	public List<Serializable> saveList(List<City> list) {
-		List<Serializable> idList = new ArrayList<Serializable>();
-		for (Iterator<City> iterator = list.iterator(); iterator.hasNext();) {
-			City entity = (City) iterator.next();
-			idList.add(cityDAO.save(entity));
-		}
-		return idList;
-	}
-	
-	@Transactional
-	public void del(City t) {
-		cityDAO.del(t);
-	}
-	@Transactional
-	public City getEntityById(Serializable id) {
-		return cityDAO.getEntityById(id);
-	}
-	@Transactional
-	public void update(City t) {
-		cityDAO.update(t);
-	}
-	@Transactional
-	public List<String> getAllCityPinYin() {
-		return cityDAO.getAllCityPinYin();
-	}
+    void setCityDAO(CityDAO cityDAO) {
+        this.cityDAO = cityDAO;
+    }
+
+    @Transactional
+    public Serializable save(City t) {
+        return cityDAO.save(t);
+    }
+
+    @Transactional
+    public List<Serializable> saveList(List<City> list) {
+        List<Serializable> idList = new ArrayList<Serializable>();
+        for (Iterator<City> iterator = list.iterator(); iterator.hasNext();) {
+            City entity = (City) iterator.next();
+            idList.add(cityDAO.save(entity));
+        }
+        return idList;
+    }
+
+    @Transactional
+    public void delete(City t) {
+        cityDAO.delete(t);
+    }
+    @Transactional
+    public City getEntityById(Serializable id) {
+        return cityDAO.getEntityById(id);
+    }
+    @Transactional
+    public void update(City t) {
+        cityDAO.update(t);
+    }
+    @Transactional
+    public List<String> getAllCityPinYin() {
+        return cityDAO.getAllCityPinYin();
+    }
 
 
     public City getCityByPinYin(String cityPinYin) {
         return null;
     }
-     @Transactional
+    @Transactional
     public List<City> getAllCity() {
         return cityDAO.getAllCity();
+    }
+    @Transactional
+    public List<City> getCityByProvinceId(String provinceId) {
+        return cityDAO.getCityByProvinceId(provinceId);
+    }
+    @Transactional
+    public City getUniqueNameChs(String chs) {
+        return cityDAO.getUniqueNameChs(chs);
     }
 }

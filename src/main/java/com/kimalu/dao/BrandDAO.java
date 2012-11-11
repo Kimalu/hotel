@@ -1,6 +1,9 @@
 package com.kimalu.dao;
 
 import com.kimalu.domain.Brand;
+import com.kimalu.domain.Province;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,4 +16,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BrandDAO extends BaseDAO<Brand> {
 
+    public Brand getUniqueNameChs(String chs) {
+        Criteria criteria= this.getSession().createCriteria(Brand.class).createCriteria("name").add(Restrictions.like("chs", chs));
+        return super.getUnique(criteria);
+    }
 }

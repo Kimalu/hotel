@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,7 +43,7 @@ public class ProvinceService/* extends BaseService<Province>*/{
 	}
 	@Transactional
 	public void del(Province t) {
-		provinceDAO.del(t);
+		provinceDAO.delete(t);
 	}
 	@Transactional
 	public Province getEntityById(Serializable id) {
@@ -58,6 +59,14 @@ public class ProvinceService/* extends BaseService<Province>*/{
 	public Province getProvinceByName(String name) {
 		return provinceDAO.getProvinceByName(name);
 	}
-	
 
+    @Transactional
+    public List<Province> getAll() {
+        return provinceDAO.getAll();
+    }
+
+    @Transactional
+    public Province getUniqueNameChs(String chs){
+        return provinceDAO.getUniqueNameChs(chs);
+    }
 }

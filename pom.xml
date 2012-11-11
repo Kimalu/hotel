@@ -228,6 +228,7 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>6.1.21</version>
                 <configuration>
+                    <scanIntervalSeconds>1</scanIntervalSeconds>
                     <webDefaultXml>src/test/resources/webdefault.xml</webDefaultXml>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">

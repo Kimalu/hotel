@@ -1,20 +1,19 @@
 package com.kimalu.service;
 
-import com.kimalu.dao.CityDAO;
+import com.kimalu.dao.HotelDAO;
 import com.kimalu.dao.RegionDAO;
+import com.kimalu.domain.Brand;
 import com.kimalu.domain.City;
 import com.kimalu.domain.Hotel;
 import com.kimalu.domain.Region;
+import com.kimalu.domain.i18n.Address;
+import com.kimalu.domain.i18n.Description;
+import com.kimalu.domain.i18n.Name;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.kimalu.dao.HotelDAO;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.Assert;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -23,6 +22,8 @@ public class HotelService /*extends BaseService<Hotel>*/ {
     private HotelDAO hotelDAO;
     @Autowired
     private RegionDAO regionDAO;
+    @Autowired
+    private BrandService brandService;
 
     HotelDAO getHotelDAO() {
         return hotelDAO;
@@ -40,14 +41,15 @@ public class HotelService /*extends BaseService<Hotel>*/ {
     @Transactional
     public List<Hotel> getHotel(String hotelPinYin, List<Region> regionList) {
         //Assert.notEmpty(regionList, "");
-        if(regionList.isEmpty()){
+        if (regionList.isEmpty()) {
             return new ArrayList<Hotel>();
         }
-        if (regionList.size() == 1) {
-            return hotelDAO.getHotel(hotelPinYin, regionList.get(0));
-        } else {
-            return hotelDAO.getHotel(hotelPinYin, regionList);
-        }
+//        if (regionList.size() == 1) {
+//            return hotelDAO.getHotel(hotelPinYin, regionList.get(0));
+//        } else {
+//            return hotelDAO.getHotel(hotelPinYin, regionList);
+//        }
+        return new ArrayList<Hotel>();
 
     }
 
@@ -57,5 +59,26 @@ public class HotelService /*extends BaseService<Hotel>*/ {
         List<Region> regionList = regionDAO.getRegionsByCity(city);
         hotelList.addAll(this.getHotel(hotelPinYin, regionList));
         return hotelList;
+    }
+
+    public void addHotel(Hotel hotel, String brandInfo, String addressInfo, String descriptionInfo) {
+
+        //TODO 增加品牌管理之后需要重构
+       Brand brand = brandService.getUniqueNameChs(brandInfo);
+        if(brand==null){
+           brand=new Brand();
+            Name name=new Name();
+            name.setChs(brandInfo);
+            brand.setName(name);
+        }
+        Address adr = new Address();
+        adr.setChs(addressInfo);
+        Description description =new Description();
+        description.setChs(descriptionInfo);
+        hotel.setDescription(description);
+        hotel.setAddress(adr);
+        hotel.setBrand(brand);
+        hotel.setAddress(adr);
+        this.hotelDAO.save(hotel);
     }
 }

@@ -22,11 +22,11 @@ public class OrderController extends BaseController {
 	
 	@Autowired
 	private OrderService orderService;
-	
-	@RequestMapping(value="/outstandingList",method=RequestMethod.GET)
-	public String outstandingList(ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException{
-		List<Order> allOutstandingOrderList=orderService.getAllOutstandingOrderList();
-		modelMap.addAttribute("list", allOutstandingOrderList);
-		return "admin/order/order_maint";
-	}
+
+    @RequestMapping(value="/outstandingList",method=RequestMethod.GET)
+    public String outstandingList(ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException{
+        List<Order> allOutstandingOrderList=orderService.getAllOutstandingOrderList();
+        modelMap.addAttribute("list", allOutstandingOrderList);
+        return "admin/order/order_maint";
+    }
 }

@@ -23,9 +23,9 @@ public class OrderServiceTest {
 
 
         Brand brand = new Brand();
-        brand.setDiscription("如家酒店，地球人都知道");
-        brand.setGrade(9.8F);
-        brand.setName("如家快捷酒店");
+      //  brand.setDiscription("如家酒店，地球人都知道");
+     //   brand.setGrade(9.8F);
+     //   brand.setName("如家快捷酒店");
         brandService.save(brand);
 
         Region region = new Region();
@@ -33,11 +33,11 @@ public class OrderServiceTest {
         regionService.save(region);
 
         Hotel hotel = new Hotel();
-        hotel.setAddress("火星路297号");
+   //     hotel.setAddress("火星路297号");
         hotel.setBrand(brand);
-        hotel.setName("如家厦门店");
-        hotel.setIntroduce("没什么好说的");
-        hotel.setLevel(5);
+    //    hotel.setName("如家厦门店");
+    //    hotel.setIntroduce("没什么好说的");
+    //    hotel.setLevel(5);
         hotel.setRegion(region);
         hotel.setTel("13600000000");
 
@@ -47,12 +47,12 @@ public class OrderServiceTest {
 
         Room room = new Room();
         room.setBedAmount(2);
-        room.setCount(20);
+  //      room.setCount(20);
         room.setExtemporePrice(400);
         room.setHotel(hotel);
         room.setHouseType(HouseType.cheapness);
         room.setNowPrice(300);
-        room.setSingleOrDouble(false);
+ //       room.setSingleOrDouble(false);
         room.setSupplyBreakFast(true);
         room.setTotalCount(30);
 
@@ -73,10 +73,10 @@ public class OrderServiceTest {
         order.setOrderNo("001201201210210");
         order.setRemark("test order");
         order.setRoom(room);
-        order.setCityName(city.getName());
-        order.setProvinceName(city.getProvince().getName());
-        order.setHotelName(hotel.getName());
-        order.setRegionName(region.getName());
+    //    order.setCityName(city.getName());
+   //     order.setProvinceName(city.getProvince().getName());
+   //     order.setHotelName(hotel.getName());
+    //    order.setRegionName(region.getName());
         order.setOrderPersonName("Kimalu");
         order.setOrderPersonTel("13600000000");
 

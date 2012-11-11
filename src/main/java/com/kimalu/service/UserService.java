@@ -34,7 +34,7 @@ public class UserService /*extends BaseService<City>*/{
 	
 	@Transactional
 	public void del(User t) {
-		userDAO.del(t);
+		userDAO.delete(t);
 	}
 	@Transactional
 	public User getEntityById(Serializable id) {
