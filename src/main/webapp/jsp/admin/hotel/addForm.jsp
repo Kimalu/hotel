@@ -77,6 +77,10 @@
             });
         }
 
+        function selectBrand(){
+            window.showModalDialog("http://www.baidu.com","","resizable:no;location:no;dialogWidth:300px;dialogHeight:300px;scroll:no;status:no")
+        }
+
 
     </script>
 </head>
@@ -136,7 +140,7 @@
                 </td>
                 <td align="left" width="78%"><input name="brandInfo" type="text" class="text1" id="brandInfo"
                                                     size="10"
-                                                    maxlength="10"></td>
+                                                    maxlength="10" readonly="readonly"><a href="#" onclick="selectBrand()">选择品牌</a> </td>
             </tr>
             <tr>
                 <td align="right" height="26">

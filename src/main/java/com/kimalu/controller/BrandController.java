@@ -34,10 +34,12 @@ public class BrandController extends BaseController {
     public String showAdd(ModelMap  modelMap){
         return "admin/brand/addForm";
     }
-    @RequestMapping(value="/doAdd",method=RequestMethod.GET)
+    @RequestMapping(value="/doAdd",method=RequestMethod.POST)
     public String doAdd(Brand brand,ModelMap  modelMap){
 
         brandService.save(brand);
+        List<Brand> brandList=this.brandService.getAllBrand();
+        modelMap.addAttribute("brandList",brandList);
         return "admin/brand/main";
     }
 }
