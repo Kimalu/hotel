@@ -71,8 +71,8 @@
 		$("#userListTable tr:gt(0)").remove();
 	}
 	
-	function addHotel() {
-		window.self.location = "<%=basePath %>hotel/showAdd";
+	function addBramd() {
+		window.self.location = "<%=basePath %>brand/showAdd";
 	}
 	function modifyUser(){
 		if(checkSelectOnlyOne()){
@@ -245,7 +245,7 @@
 				<input name="btnPreviousPage" class="button1" type="button" id="btnPreviousPage" value=" &lt;  " title="上页" onClick="previousPage()">
 				<input name="btnNextPage" class="button1" type="button" id="btnNextPage" value="  &gt; " title="下页" onClick="nextPage()">
 				<input name="btnBottomPage" class="button1" type="button" id="btnBottomPage" value=" &gt;&gt;|" title="尾页" onClick="bottomPage()">
-				<input name="btnAdd" type="button" class="button1" id="btnAdd" value="添加" onClick="addHotel()">
+				<input name="btnAdd" type="button" class="button1" id="btnAdd" value="添加" onClick="addBramd()">
 				<input name="btnDelete" class="button1" type="button" id="btnDelete" value="删除" onClick="deleteUser()">
 				<input name="btnModify" class="button1" type="button" id="btnModify" value="修改" onClick="modifyUser()">
 			</div>

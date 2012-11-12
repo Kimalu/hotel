@@ -24,9 +24,20 @@ public class BrandController extends BaseController {
     private BrandService brandService;
 
     @RequestMapping(value="/manager",method=RequestMethod.GET)
-    public String manager(ModelMap  modelMap) throws JsonGenerationException, JsonMappingException, IOException{
+    public String manager(ModelMap  modelMap){
         List<Brand> brandList=this.brandService.getAllBrand();
         modelMap.addAttribute("brandList",brandList);
+        return "admin/brand/main";
+    }
+
+    @RequestMapping(value="/showAdd",method=RequestMethod.GET)
+    public String showAdd(ModelMap  modelMap){
+        return "admin/brand/addForm";
+    }
+    @RequestMapping(value="/doAdd",method=RequestMethod.GET)
+    public String doAdd(Brand brand,ModelMap  modelMap){
+
+        brandService.save(brand);
         return "admin/brand/main";
     }
 }
