@@ -11,9 +11,43 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>添加酒店</title>
     <link rel="stylesheet" href="style/drp.css">
-    <script type="text/javascript" src="script/jquery/jquery-1.4.4.js"></script>
-    <script type="text/javascript" src="script/user_validate.js"></script>
+    <link rel="stylesheet" href="js/themes/base/jquery.ui.all.css">
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+
+
+    <script src="js/external/jquery.bgiframe-2.1.2.js"></script>
+    <script src="js/ui/jquery.ui.core.js"></script>
+    <script src="js/ui/jquery.ui.widget.js"></script>
+    <script src="js/ui/jquery.ui.mouse.js"></script>
+    <script src="js/ui/jquery.ui.button.js"></script>
+    <script src="js/ui/jquery.ui.draggable.js"></script>
+    <script src="js/ui/jquery.ui.position.js"></script>
+    <script src="js/ui/jquery.ui.resizable.js"></script>
+    <script src="js/ui/jquery.ui.dialog.js"></script>
+    <script src="js/ui/jquery.ui.effect.js"></script>
     <script type="text/javascript">
+
+        $(function(){
+            $( "#dialog-form" ).dialog({
+                autoOpen: false,
+                height: 300,
+                width: 350,
+                modal: true,
+                buttons: {
+                    "确定": function() {
+                         alert("确定");
+                    },
+                    "取消": function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+                close: function() {
+
+                }
+            });
+
+        })
+
         function goBack() {
             window.self.location = "user_maint.jsp";
         }
@@ -78,7 +112,15 @@
         }
 
         function selectBrand(){
-            window.showModalDialog("http://www.baidu.com","","resizable:no;location:no;dialogWidth:300px;dialogHeight:300px;scroll:no;status:no")
+            $.getJSON('<%=basePath%>brand/getAllBrand', {}, function (data) {
+                var items = [];
+                $.each(data, function (key, val) {
+                    items.push('<tr><td><input type="radio" id="'+val.id+'"/></td><td>'+val.name.chs+'</td><td>'+val.level+'</td><td>'+val.score+'</td><td><a href="#">详细</a></td>');
+                });
+                $("#brandTable").append(items.join(' '));
+            });
+            $( "#dialog-form" ).dialog( "open" );
+            return false;
         }
 
 
@@ -86,6 +128,27 @@
 </head>
 
 <body class="body1">
+<div id="dialog-form" title="Create new user">
+    <p class="validateTips">All form fields are required.</p>
+
+    <form>
+
+         <input type="text" id="brandName" name="brandName"/>
+
+        <table id="brandTable" border="1">
+            <tr>
+                <td>选择</td>
+                <td>名称</td>
+                <td>星级</td>
+                <td>评分</td>
+                <td>操作</td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+
 <form name="userForm" target="_self" id="userForm" method="post" action="<%=basePath%>hotel/doAdd">
     <div align="center">
         <table width="95%" border="0" cellspacing="2" cellpadding="2">
@@ -140,7 +203,7 @@
                 </td>
                 <td align="left" width="78%"><input name="brandInfo" type="text" class="text1" id="brandInfo"
                                                     size="10"
-                                                    maxlength="10" readonly="readonly"><a href="#" onclick="selectBrand()">选择品牌</a> </td>
+                                                    maxlength="10" readonly="readonly"><a href="#" onclick="return selectBrand()">选择品牌</a> </td>
             </tr>
             <tr>
                 <td align="right" height="26">
@@ -175,5 +238,11 @@
         </div>
     </div>
 </form>
+
+
+
+
+
+
 </body>
 </html>

@@ -42,4 +42,11 @@ public class BrandController extends BaseController {
         modelMap.addAttribute("brandList",brandList);
         return "admin/brand/main";
     }
+
+    @RequestMapping(value="/getAllBrand",method=RequestMethod.GET)
+    @ResponseBody
+    public String getAllBrand(ModelMap  modelMap) throws IOException {
+       List<Brand> brandList= this.brandService.getAllBrand();
+        return toJson(brandList);
+    }
 }
