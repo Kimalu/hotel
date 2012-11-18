@@ -40,6 +40,8 @@ public class HotelController extends BaseController {
 
     @RequestMapping(value = "/manager")
     public String hotelList(ModelMap modelMap) {
+        List<Hotel> hotelList=this.hotelService.getAllHotel();
+        modelMap.addAttribute("hotelList",hotelList);
         return "admin/hotel/main";
     }
 

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
@@ -211,6 +212,17 @@
 		<td width="150" class="rd6">email</td>
 		<td width="153" class="rd6">创建日期</td>
 	</tr>
+    <c:forEach items="${hotelList}" var="hotel">
+        <tr>
+            <td width="55" class="rd6"><input type="checkbox" id="${hotel.id}" onClick="checkAll()"></td>
+            <td width="119" class="rd6">${hotel.brand.name.chs}</td>
+            <td width="152" class="rd6">${hotel.brand.level}</td>
+            <td width="166" class="rd6">${hotel.tel}</td>
+            <td width="150" class="rd6">${hotel.address.chs}</td>
+            <td width="153" class="rd6">${hotel.description.chs}</td>
+        </tr>
+
+    </c:forEach>
 	</table>
 <table width="95%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" class="rd1">
 	<tr>

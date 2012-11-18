@@ -49,4 +49,12 @@ public class BrandController extends BaseController {
        List<Brand> brandList= this.brandService.getAllBrand();
         return toJson(brandList);
     }
+
+    @RequestMapping(value="/getBrandByName",method=RequestMethod.GET)
+    @ResponseBody
+    public String getBrandByName(String brandName,ModelMap  modelMap) throws IOException {
+
+        List<Brand> brandList= this.brandService.getBrandByName(brandName);
+        return toJson(brandList);
+    }
 }

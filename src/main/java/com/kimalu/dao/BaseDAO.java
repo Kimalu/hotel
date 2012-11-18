@@ -155,7 +155,9 @@ public class BaseDAO<T> {
         return createCriteria(criterions).list();
     }
 
-
+    public List<T> getList(final Criteria  criteria){
+        return criteria.list();
+    }
 
 	//createQuery++++++++++++++++++++++start
 	public Query createQuery(final String queryString, final Object... values) {

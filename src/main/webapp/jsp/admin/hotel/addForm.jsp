@@ -35,7 +35,11 @@
                 modal: true,
                 buttons: {
                     "确定": function() {
-                         alert("确定");
+                        if( $("input:checked").length>0){
+                            $('#brandId').val( $("input:checked").attr("id"));
+                            $('#brandInfo').val($("input:checked").val());
+                        }
+                        $( this ).dialog( "close" );
                     },
                     "取消": function() {
                         $( this ).dialog( "close" );
@@ -115,12 +119,28 @@
             $.getJSON('<%=basePath%>brand/getAllBrand', {}, function (data) {
                 var items = [];
                 $.each(data, function (key, val) {
-                    items.push('<tr><td><input type="radio" id="'+val.id+'"/></td><td>'+val.name.chs+'</td><td>'+val.level+'</td><td>'+val.score+'</td><td><a href="#">详细</a></td>');
+                    items.push('<tr><td><input type="radio" name="rdo" id="'+val.id+'"  value="'+ val.name.chs+'"/></td><td>'+val.name.chs+'</td><td>'+val.level+'</td><td>'+val.score+'</td></tr>');
                 });
                 $("#brandTable").append(items.join(' '));
             });
             $( "#dialog-form" ).dialog( "open" );
             return false;
+        }
+
+        function queryBrand(){
+            clearBrandTable();
+            var brandName=$("#brandName").val();
+            $.getJSON('<%=basePath%>brand/getBrandByName', {"brandName":brandName}, function (data) {
+                var items = [];
+                $.each(data, function (key, val) {
+                    items.push('<tr><td><input type="radio" name="rdo" id="'+val.id+'" value="'+ val.name.chs+'"/></td><td>' + val.name.chs + '</td><td>' + val.level + '</td><td>' + val.score + '</td><tr>');
+                });
+                $("#city_id").append(items.join(' '));
+            });
+        }
+
+        function clearBrandTable(){
+
         }
 
 
@@ -129,22 +149,19 @@
 
 <body class="body1">
 <div id="dialog-form" title="Create new user">
-    <p class="validateTips">All form fields are required.</p>
 
-    <form>
 
-         <input type="text" id="brandName" name="brandName"/>
 
+
+         品牌名称:<input type="text" id="brandName" name="brandName"/><input type="button" value="查询" onclick="queryBrand()"/>
         <table id="brandTable" border="1">
             <tr>
                 <td>选择</td>
                 <td>名称</td>
                 <td>星级</td>
                 <td>评分</td>
-                <td>操作</td>
             </tr>
         </table>
-    </form>
 </div>
 
 
@@ -201,7 +218,9 @@
                 <td align="right" width="22%" height="29">
                     <div align="right"><font color="#FF0000">*</font>酒店品牌名称:&nbsp;</div>
                 </td>
-                <td align="left" width="78%"><input name="brandInfo" type="text" class="text1" id="brandInfo"
+                <td align="left" width="78%">
+                    <input type="hidden" name="brand.id" id="brandId"/>
+                    <input name="brandInfo" type="text" class="text1" id="brandInfo"
                                                     size="10"
                                                     maxlength="10" readonly="readonly"><a href="#" onclick="return selectBrand()">选择品牌</a> </td>
             </tr>

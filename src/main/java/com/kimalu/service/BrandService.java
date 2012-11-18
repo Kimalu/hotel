@@ -41,4 +41,8 @@ public class BrandService {
     public List<Brand> getAllBrand() {
         return brandDAO.getList();
     }
+    @Transactional
+    public List<Brand> getBrandByName(String brandName) {
+        return this.brandDAO.getBrandByName(brandName);
+    }
 }

@@ -63,22 +63,17 @@ public class HotelService /*extends BaseService<Hotel>*/ {
 
     public void addHotel(Hotel hotel, String brandInfo, String addressInfo, String descriptionInfo) {
 
-        //TODO 增加品牌管理之后需要重构
-       Brand brand = brandService.getUniqueNameChs(brandInfo);
-        if(brand==null){
-           brand=new Brand();
-            Name name=new Name();
-            name.setChs(brandInfo);
-            brand.setName(name);
-        }
         Address adr = new Address();
         adr.setChs(addressInfo);
         Description description =new Description();
         description.setChs(descriptionInfo);
         hotel.setDescription(description);
         hotel.setAddress(adr);
-        hotel.setBrand(brand);
         hotel.setAddress(adr);
         this.hotelDAO.save(hotel);
+    }
+    @Transactional
+    public List<Hotel> getAllHotel() {
+        return this.hotelDAO.getList();
     }
 }
