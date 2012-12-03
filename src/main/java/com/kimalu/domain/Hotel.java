@@ -12,7 +12,7 @@ public class Hotel {
     @GeneratedValue(generator = "hotel_uuid")
     @GenericGenerator(name = "hotel_uuid", strategy = "uuid")
     private String id;
-    @ManyToOne(cascade =CascadeType.ALL)        //TODO 品牌维护做好之后要取消级联
+    @ManyToOne        //TODO 品牌维护做好之后要取消级联
     private Brand brand;
     @ManyToOne
     private Region region;
@@ -23,6 +23,16 @@ public class Hotel {
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name ="description_id")
     private Description description;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    private String email;
 
     public Address getAddress() {
         return address;

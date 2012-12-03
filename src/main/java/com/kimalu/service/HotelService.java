@@ -1,5 +1,6 @@
 package com.kimalu.service;
 
+import com.kimalu.dao.BrandDAO;
 import com.kimalu.dao.HotelDAO;
 import com.kimalu.dao.RegionDAO;
 import com.kimalu.domain.Brand;
@@ -23,7 +24,9 @@ public class HotelService /*extends BaseService<Hotel>*/ {
     @Autowired
     private RegionDAO regionDAO;
     @Autowired
-    private BrandService brandService;
+    private BrandDAO brandDAO;
+//    @Autowired
+//    private BrandService brandService;
 
     HotelDAO getHotelDAO() {
         return hotelDAO;
@@ -61,17 +64,26 @@ public class HotelService /*extends BaseService<Hotel>*/ {
         return hotelList;
     }
 
-    public void addHotel(Hotel hotel, String brandInfo, String addressInfo, String descriptionInfo) {
-
-        Address adr = new Address();
-        adr.setChs(addressInfo);
-        Description description =new Description();
-        description.setChs(descriptionInfo);
-        hotel.setDescription(description);
-        hotel.setAddress(adr);
-        hotel.setAddress(adr);
+    //    public void addHotel(Hotel hotel, String brandInfo, String addressInfo, String descriptionInfo) {
+//
+//        Address adr = new Address();
+//        adr.setChs(addressInfo);
+//        Description description =new Description();
+//        description.setChs(descriptionInfo);
+//        hotel.setDescription(description);
+//        hotel.setAddress(adr);
+//        this.hotelDAO.save(hotel);
+//    }
+    public void addHotel(Hotel hotel) {
+        String brandId=hotel.getBrand().getId();
+        Brand brand=brandDAO.getEntityById(brandId);
+        String regionId=hotel.getRegion().getId();
+        Region region=regionDAO.getEntityById(regionId);
+        hotel.setBrand(brand);
+        hotel.setRegion(region);
         this.hotelDAO.save(hotel);
     }
+
     @Transactional
     public List<Hotel> getAllHotel() {
         return this.hotelDAO.getList();

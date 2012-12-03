@@ -85,7 +85,6 @@
             });
         }
         function showRegionByCity(cityId) {
-            alert(cityId);
             resetRegionSelect();
 
             $.getJSON('<%=basePath%>region/getRegionByCityId', {"cityId":cityId}, function (data) {
@@ -226,9 +225,30 @@
             </tr>
             <tr>
                 <td align="right" height="26">
-                    <div align="right"><font color="#FF0000">*</font>酒店地址:&nbsp;</div>
+                    <div align="right"><font color="#FF0000">*</font>酒店地址(简):&nbsp;</div>
                 </td>
-                <td align="left"><input name="addressInfo" type="text" class="text1" id="addressInfo" size="20"
+                <td align="left"><input name="address.chs" type="text" class="text1" id="address_chs" size="20"
+                                        maxlength="20"></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right"><font color="#FF0000">*</font>酒店地址(繁):&nbsp;</div>
+                </td>
+                <td align="left"><input name="address.cht" type="text" class="text1" id="address_cht" size="20"
+                                        maxlength="20"></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right"><font color="#FF0000">*</font>酒店地址(英):&nbsp;</div>
+                </td>
+                <td align="left"><input name="address.en" type="text" class="text1" id="address_en" size="20"
+                                        maxlength="20"></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right"><font color="#FF0000">*</font>酒店地址(日):&nbsp;</div>
+                </td>
+                <td align="left"><input name="address.jp" type="text" class="text1" id="address_jp" size="20"
                                         maxlength="20"></td>
             </tr>
             <tr>
@@ -240,10 +260,38 @@
             </tr>
             <tr>
                 <td align="right" height="26">
-                    <div align="right">酒店描述:&nbsp;</div>
+                    <div align="right"><font color="#FF0000">*</font>email:&nbsp;</div>
                 </td>
-                <td align="left"><textarea name="descritpionInfo" type="text" class="text1" id="descritpionInfo" size="20"
+                <td align="left"><label><input name="email" type="text" class="text1" id="email" size="20"
+                                               maxlength="20"/></label></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right">酒店描述(中):&nbsp;</div>
+                </td>
+                <td align="left"><textarea name="description.chs" type="text" class="text1" id="description_chs" size="20"
                                         maxlength="20"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right">酒店描述(繁):&nbsp;</div>
+                </td>
+                <td align="left"><textarea name="description.cht" type="text" class="text1" id="description_cht" size="20"
+                                           maxlength="20"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right">酒店描述(英):&nbsp;</div>
+                </td>
+                <td align="left"><textarea name="description.en" type="text" class="text1" id="description_en" size="20"
+                                           maxlength="20"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right" height="26">
+                    <div align="right">酒店描述(日):&nbsp;</div>
+                </td>
+                <td align="left"><textarea name="description.jp" type="text" class="text1" id="description_jp" size="20"
+                                           maxlength="20"></textarea></td>
             </tr>
 
         </table>

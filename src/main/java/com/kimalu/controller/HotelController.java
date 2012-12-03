@@ -53,10 +53,15 @@ public class HotelController extends BaseController {
     }
 
     @RequestMapping(value = "/doAdd",method = RequestMethod.POST)
-    public String doAdd(Hotel hotel,String brandInfo,String addressInfo,String descriptionInfo,ModelMap modelMap) {
-        this.hotelService.addHotel(hotel,brandInfo,addressInfo,descriptionInfo);
+    public String doAdd(Hotel hotel) {
+        this.hotelService.addHotel(hotel);
         return "admin/hotel/main";
     }
+    //@RequestMapping(value = "/doAdd",method = RequestMethod.POST)
+//    public String doAdd(Hotel hotel,String brandInfo,String addressInfo,String descriptionInfo,ModelMap modelMap) {
+//        this.hotelService.addHotel(hotel,brandInfo,addressInfo,descriptionInfo);
+//        return "admin/hotel/main";
+//    }
 
 
 }

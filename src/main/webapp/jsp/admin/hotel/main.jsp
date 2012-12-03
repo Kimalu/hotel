@@ -206,20 +206,20 @@
 <table id="userListTable" width="95%" border="1" cellspacing="0" cellpadding="0" align="center" class="table1">
 	<tr>
 		<td width="55" class="rd6"><input type="checkbox" id="ifAll" name="ifAll" onClick="checkAll()"></td>
-		<td width="119" class="rd6">用户代码</td>
-		<td width="152" class="rd6">用户名称</td>
-		<td width="166" class="rd6">联系电话</td>
+		<td width="119" class="rd6">酒店名称</td>
+		<td width="152" class="rd6">酒店星级</td>
+		<td width="166" class="rd6">酒店地址</td>
 		<td width="150" class="rd6">email</td>
-		<td width="153" class="rd6">创建日期</td>
+		<td width="153" class="rd6">电话</td>
 	</tr>
     <c:forEach items="${hotelList}" var="hotel">
         <tr>
             <td width="55" class="rd6"><input type="checkbox" id="${hotel.id}" onClick="checkAll()"></td>
             <td width="119" class="rd6">${hotel.brand.name.chs}</td>
             <td width="152" class="rd6">${hotel.brand.level}</td>
-            <td width="166" class="rd6">${hotel.tel}</td>
             <td width="150" class="rd6">${hotel.address.chs}</td>
-            <td width="153" class="rd6">${hotel.description.chs}</td>
+            <td width="153" class="rd6">${hotel.email}</td>
+            <td width="166" class="rd6">${hotel.tel}</td>
         </tr>
 
     </c:forEach>
