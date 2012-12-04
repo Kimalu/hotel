@@ -3,6 +3,7 @@ package com.kimalu.service;
 import com.kimalu.dao.BrandDAO;
 import com.kimalu.dao.HotelDAO;
 import com.kimalu.dao.RegionDAO;
+import com.kimalu.dao.page.Page;
 import com.kimalu.domain.Brand;
 import com.kimalu.domain.City;
 import com.kimalu.domain.Hotel;
@@ -42,26 +43,24 @@ public class HotelService /*extends BaseService<Hotel>*/ {
     }
 
     @Transactional
-    public List<Hotel> getHotel(String hotelPinYin, List<Region> regionList) {
+    public Page<Hotel> getHotel(Page<Hotel> page, String hotelName, List<Region> regionList) {
         //Assert.notEmpty(regionList, "");
-        if (regionList.isEmpty()) {
-            return new ArrayList<Hotel>();
+        if (!regionList.isEmpty()) {
+            if (regionList.size() == 1) {
+                return hotelDAO.getHotel(page, hotelName, regionList.get(0));
+            } else {
+                return hotelDAO.getHotel(page, hotelName, regionList);
+            }
         }
-//        if (regionList.size() == 1) {
-//            return hotelDAO.getHotel(hotelPinYin, regionList.get(0));
-//        } else {
-//            return hotelDAO.getHotel(hotelPinYin, regionList);
-//        }
-        return new ArrayList<Hotel>();
+        return page;
 
     }
 
     @Transactional
-    public List<Hotel> getHotel(String hotelPinYin, City city) {
+    public Page<Hotel> getHotel(Page page, String hotelName, City city) {
         List<Hotel> hotelList = new ArrayList<Hotel>();
         List<Region> regionList = regionDAO.getRegionsByCity(city);
-        hotelList.addAll(this.getHotel(hotelPinYin, regionList));
-        return hotelList;
+        return this.getHotel(page, hotelName, regionList);
     }
 
     //    public void addHotel(Hotel hotel, String brandInfo, String addressInfo, String descriptionInfo) {
@@ -75,10 +74,10 @@ public class HotelService /*extends BaseService<Hotel>*/ {
 //        this.hotelDAO.save(hotel);
 //    }
     public void addHotel(Hotel hotel) {
-        String brandId=hotel.getBrand().getId();
-        Brand brand=brandDAO.getEntityById(brandId);
-        String regionId=hotel.getRegion().getId();
-        Region region=regionDAO.getEntityById(regionId);
+        String brandId = hotel.getBrand().getId();
+        Brand brand = brandDAO.getEntityById(brandId);
+        String regionId = hotel.getRegion().getId();
+        Region region = regionDAO.getEntityById(regionId);
         hotel.setBrand(brand);
         hotel.setRegion(region);
         this.hotelDAO.save(hotel);

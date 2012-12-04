@@ -39,6 +39,13 @@ public class PageBaseDAO<T> extends BaseDAO<T> {
         page.setList(c.list());
         return page;
     }
+    public Page<T> getPage(Page<T> page,Criteria criteria) {
+        Assert.notNull(page, "page不能为空");
+        page.setTotalNum(criteria.list().size());
+        setPageParam(criteria, page);
+        page.setList(criteria.list());
+        return page;
+    }
 
     public Page<T> getPage(Page<T> page, String hql) {
         return this.getPage(page, hql);
@@ -153,4 +160,5 @@ public class PageBaseDAO<T> extends BaseDAO<T> {
         long count = (Long) this.getSession().createQuery(hql).uniqueResult();
         return count;
     }
+
 }

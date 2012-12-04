@@ -23,20 +23,20 @@ public class CityController extends BaseController {
     @Autowired
     private CityService cityService;
 
-//    @RequestMapping(value="/getAllCityPinYin",method=RequestMethod.POST)
-//    @ResponseBody
-//    public String getAllCityPinYin() throws JsonGenerationException, JsonMappingException, IOException{
-//        List<SearchCityDTO> cityDTOList=new ArrayList<SearchCityDTO>();
-//        List<City> allCityList=cityService.getAllCity();
-//        for (Iterator<City> iterator = allCityList.iterator(); iterator.hasNext(); ) {
-//            City next =  iterator.next();
-//            SearchCityDTO dto=new SearchCityDTO();
-//            dto.setId(next.getId());
-//         //   dto.setValue(next.getPinyin());
-//            cityDTOList.add(dto);
-//        }
-//        return toJson(cityDTOList);
-//    }
+    @RequestMapping(value="/getAllCityPinYin",method=RequestMethod.POST)
+    @ResponseBody
+    public String getAllCityPinYin() throws JsonGenerationException, JsonMappingException, IOException{
+        List<SearchCityDTO> cityDTOList=new ArrayList<SearchCityDTO>();
+        List<City> allCityList=cityService.getAllCity();
+        for (Iterator<City> iterator = allCityList.iterator(); iterator.hasNext(); ) {
+            City next =  iterator.next();
+            SearchCityDTO dto=new SearchCityDTO();
+            dto.setId(next.getId());
+            dto.setValue(next.getName().getEn());
+            cityDTOList.add(dto);
+        }
+        return toJson(cityDTOList);
+    }
 
     @RequestMapping(value="/getCityByProvinceId",method=RequestMethod.GET)
     @ResponseBody

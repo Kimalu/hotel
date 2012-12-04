@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
     String path = request.getContextPath();
@@ -5,878 +6,367 @@
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-  
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-site-verification" content="AolagKSs8MfdIEAANjXDfN_jEotfFwi37K9Evjyy1Zc">
+    <meta name="baidu_union_verify" content="287fefe6386a7cd508ffcb1ed64fee1d">
+    <title>
+        Yangzhou Rujia Hotel: Hotels Yangzhou, China, Yangzhou Hotel Reservation, Discount Yangzhou Hotels in China
+    </title>
 
-<meta name="Description" content=" Need a hotel in CHINA HOTEL? Choose from all over CHINA HOTEL hotels with huge savings. Whatever your budget, compare 2012-11-02 prices and read reviews for all our CHINA HOTEL hotels.">
-<meta name="Keywords" content="CHINA HOTEL Hotels,CHINA HOTEL ,lodging,CHINA HOTEL hotel deals,accommodation, recommendations, recommended, hotel, hotels, vacation, reviews, advice, travel, vacations">
-<meta name="copyright" content="Copyright 2011 ">
-
-<title>CHINA HOTEL Hotels_CHINA HOTEL deals_Accommodation&amp;Booking Hotels-ChinaHotel</title> 
-<link type="text/css" href="chinahotels_list.php_files/ch_list_css1.css" rel="stylesheet">
-<link href="chinahotels_list.php_files/hotel_list.htm" rel="stylesheet" type="text/css">
-<link type="text/css" rel="stylesheet" href="chinahotels_list.php_files/calendar.css">
-<script type="text/javascript" src="chinahotels_list.php_files/calendar.js"></script>  
-<script type="text/javascript" src="chinahotels_list.php_files/calendar-zh.js"></script>
-<script type="text/javascript" src="chinahotels_list.php_files/calendar-setup.js"></script>
-<script id="lcScript_0" src="chinahotels_list.php_files/ChatButton.htm" type="text/javascript"></script><script id="lcScript_39" src="chinahotels_list.php_files/LiveChatVisitorHandler.htm" type="text/javascript"></script></head>
-
-<body style="">
-
-<div class="topp_nav">
-<div class="top_class">
-
-<div class="top_class_lef">
-<p><em>Tel:</em>400-889-9093,<em>Phone:</em> 0592-5199895</p>
-</div>
-
-<div class="top_class_rig">
-<ul>
-<li><a href="http://www.chinahotel.com.cn/help_en/about.html" rel="nofollow">About Chinahotel</a></li>
-<li><a href="http://www.chinahotel.com.cn/map.html">Chinahotels Sitemaps</a></li>
-<li><a href="http://www.chinahotel.com.cn/chinahotels_login.php" rel="nofollow">My Account</a></li>
-</ul>
-
-</div>
-
-<div class="clear"> </div>
-</div></div>
+    <meta name="description"
+          content="Hotels in Yangzhou, China: online reservation Yangzhou  hotels with great discounts, GUARANTEED LOWEST Yangzhou Hotel for 3-5 Star Hotels at China Hotel.">
+    <meta name="keywords"
+          content="Yangzhou Hotels, Yangzhou Hotel China, Yangzhou hostels,  hotels Yangzhou, Yangzhou hotel booking, Yangzhou luxury hotels, Yangzhou hotels map, Yangzhou hotel reviews, Yangzhou hotel map, Yangzhou airport hotel, accommodation, discount, deals">
+    <meta name="google-site-verification" content="AolagKSs8MfdIEAANjXDfN_jEotfFwi37K9Evjyy1Zc">
 
 
-
-<div class="chinahotel">
-<div class="text_nav">
- 
-<div class="text_nav_logo"><a href="http://www.chinahotel.com.cn/"><img src="chinahotels_list.php_files/logo.jpg" alt="Chinahotel"></a>
-<div>
-<a href="http://cn.chinahotel.com.cn/ChinaHotels.html"><img src="chinahotels_list.php_files/cn.gif" class="text_nav_img" alt="cn.chinahotel.com.cn"></a>
-<a href="http://tw.chinahotel.com.cn/ChinaHotels.html"><img src="chinahotels_list.php_files/tw.gif" class="text_nav_img" alt="tw.chinahotel.com.cn"></a>
-<a href="http://jp.chinahotel.com.cn/ChinaHotels.html"><img src="chinahotels_list.php_files/jp.gif" class="text_nav_img" alt="jp.chinahotel.com.cn"></a>
-<a href="http://en.chinahotel.com.cn/ChinaHotels.html"><img src="chinahotels_list.php_files/en.gif" class="text_nav_img" alt="en.chinahotel.com.cn"></a>
-<a href="http://www.chinahotel.com.cn/ChinaHotels.html"><img src="chinahotels_list.php_files/us.gif" class="text_nav_img" alt="en.chinahotel.com.cn"></a>
-</div>
-
-</div>
+    <link href="Search_files/index.css" rel="stylesheet" type="text/css">
+    <link href="Search_files/search.css" rel="stylesheet" type="text/css">
+    <link href="Search_files/jquery.css" rel="stylesheet" type="text/css">
 
 
-  <div class="text_nav_text">
-  <ul> 
-   	<li>
-	<a href="http://shanghai.chinahotel.com.cn/" rel="nofollow">
-	Shanghai Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://beijing.chinahotel.com.cn/" rel="nofollow">
-	Beijing Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://tianjin.chinahotel.com.cn/" rel="nofollow">
-	Tianjin Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://chongqing.chinahotel.com.cn/" rel="nofollow">
-	Chongqing Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://.chinahotel.com.cn/" rel="nofollow">
-	Hongkong Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://zhejiang.chinahotel.com.cn/" rel="nofollow">
-	Zhejiang Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://jiangsu.chinahotel.com.cn/" rel="nofollow">
-	Jiangsu Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://fujian.chinahotel.com.cn/" rel="nofollow">
-	Fujian Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://hainan.chinahotel.com.cn/" rel="nofollow">
-	Hainan Hotel</a>
-	</li>
-	</ul><ul>  	<li>
-	<a href="http://guangdong.chinahotel.com.cn/" rel="nofollow">
-	Guangdong Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://guangxi.chinahotel.com.cn/" rel="nofollow">
-	Guangxi Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://hunan.chinahotel.com.cn/" rel="nofollow">
-	Hunan Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://hubei.chinahotel.com.cn/" rel="nofollow">
-	Hubei Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://shandong.chinahotel.com.cn/" rel="nofollow">
-	Shandong Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://shanxi.chinahotel.com.cn/" rel="nofollow">
-	Shanxi Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://henan.chinahotel.com.cn/" rel="nofollow">
-	Henan Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://hebei.chinahotel.com.cn/" rel="nofollow">
-	Hebei Hotel</a>
-	</li>
-	  	<li>
-	<a href="http://sichuan.chinahotel.com.cn/" rel="nofollow">
-	Sichuan Hotel</a>
-	</li>
-	</ul><ul>    </ul> 
-   <div class="clear"> </div>
-  
-  <h2>CHINA HOTEL Hotel Deals &amp; Reservations </h2> </div>
+    <!-- <link rel="stylesheet" href="../../Content/css.css" /> -->
+    <script src="Search_files/ga.js" async="" type="text/javascript"></script>
+    <script src="Search_files/jquery-1.js"></script>
+    <script src="Search_files/jquery_002.js" type="text/javascript"></script>
 
-</div>
-<div class="menu_nav">
-<ul>
-   <li class="onho"><a href="http://www.chinahotel.com.cn/index.php">Home</a></li>
-   <li> <a href="http://www.chinahotel.com.cn/ChinaHotels.html">China Hotels</a></li>	
-   <li> <a href="http://www.chinahotel.com.cn/Beijing-Hotels.html">Beijing Hotels</a></li>
-   <li> <a href="http://www.chinahotel.com.cn/Shanghai-Hotels.html">Shanghai Hotels</a></li>
-   <li> <a href="http://www.chinahotel.com.cn/Guangzhou-Hotels.html">Guangzhou Hotels</a></li>
-   <li> <a href="http://www.chinahotel.com.cn/Hangzhou-Hotels.html">Hangzhou Hotels</a></li>
-   <li> <a href="http://www.chinahotel.com.cn/chinahotels_list.php?more=0&amp;select5=1&amp;h_name=&amp;sys_loc2=&amp;sys_loc1=undefined&amp;lang=1&amp;has14_str_date=2012-11-02&amp;has14_end_date=2012-11-03&amp;has14_hotel_name=rujia"> </a></li>
-   <li> <a href="http://www.chinahotel.com.cn/China-Attractions.html">China Attractions</a></li>
-   <li> <a href="http://www.chinahotel.com.cn/China-Destinations.html">Destinations</a></li> 
+    <script src="Search_files/Top.js" type="text/javascript"></script>
 
- </ul>
-   </div>
-  
- <!--Demo  Star -->
- <div class="cont">
-
-  <!--左边栏  结束 -->
- <div class="Cont_lefcon">
-  <div class="Cont_lefnav">
- <h2>CHINA HOTEL Deals</h2>
- <ul>
- 
- <li><a href="http://www.chinahotel.com.cn/ChinaHotels.html" title="CHINA HOTEL Reservations">
- CHINA HOTEL Reservations</a></li>
-
-
-<li><a href="http://www.chinahotel.com.cn/China-Attractions.html" title="CHINA HOTEL Attractions">
- CHINA HOTEL Attractions</a></li>
-
-
- <li><a href="http://www.chinahotel.com.cn/China-Destinations.html" title="CHINA HOTEL Destinations">
- CHINA HOTEL Destinations</a></li>
-
-
- <li><a href="http://www.chinahotel.com.cn/2010wea.php" title="CHINA HOTEL Weather">
- CHINA HOTEL Weather</a></li>
-
-
-<li><a href="http://www.chinahotel.com.cn/2010car.php" title="CHINA HOTEL CarRentals">
- CHINA HOTEL CarRentals</a></li>
- 
- 
- <li><a href="http://www.chinahotel.com.cn/chinahotels_hotel_map.php" title="CHINA HOTEL Maps">
- CHINA HOTEL Maps</a></li>
- 
- 
-  <li><a href="http://www.chinahotel.com.cn/Sitemap_Hotels.html" title="CHINA HOTEL Reservations">
- CHINA HOTEL Reservations</a></li>
- 
-  <li><a href="http://www.chinahotel.com.cn/Sitemap_Scenerys.html" title="CHINA HOTEL Travel Guide">
- CHINA HOTEL Travel Guide</a></li>
- 
-  <!--其它预订-->
-  </ul>
-</div>
- <div class="clear"></div>
- 
-
- 
- 
- 
-
- <div class="Cont_lefloc">
- <h3> Narrow results by CHINA HOTELHotel</h3>
- 
-  <!--同省其它城市-->
-   <div class="cont_lefloc_tit">CHINA HOTEL Hotels</div>
- <ul class="cont_lefloc_con">
- 
- <li><a href="http://www.chinahotel.com.cn/ChinaHotels.html">CHINA HOTEL</a></li>
- 
- </ul>
- <div class="clear"></div>
- <!--同省其它城市结束-->
- 
- 
- 
-  <!--酒店价格-->
- <div class="cont_lefloc_tit">CHINA HOTEL Price</div>
- <ul class="cont_lefloc_con">
- <li><a href="http://www.chinahotel.com.cn/chinahotels_list.php?has14_hotel_name=rujia" class="chot">ALL Price</a></li>
- <li><a href="http://www.chinahotel.com.cn/chinahotels_list.php?has14_hotel_name=rujia">200-400</a></li>
- <li><a href="http://www.chinahotel.com.cn/chinahotels_list.php?has14_hotel_name=rujia">400-500</a></li>
- <li><a href="http://www.chinahotel.com.cn/chinahotels_list.php?has14_hotel_name=rujia">500-700</a></li>
- <li><a href="http://www.chinahotel.com.cn/chinahotels_list.php?has14_hotel_name=rujia">700-1000</a></li>
- </ul>
- <div class="clear"></div>
-  <!--酒店价格结束-->
-  
-    <!--酒店星级-->
- <div class="cont_lefloc_tit">CHINA HOTEL Hotel class</div>
- <ul class="cont_lefloc_con">
- <li><a href="http://www.chinahotel.com.cn/chinahotels_list.php?has14_hotel_name=rujia" class="chot">ALL class</a></li>
-  </ul>
- <div class="clear"></div>
-  <!--酒店星级结束-->
-  
-  <!--行政区-->
-  <!--行政区结束-->
-  
-  <!--商业区-->
-   <div class="cont_lefloc_tit">CHINA HOTEL Districts</div>
- <ul class="cont_lefloc_sep">
- 
- <li><a href="http://www.chinahotel.com.cn/ChinaHotels.html" class="chot">ALL Districts</a></li>
-  </ul>
-  <!--商业区结束-->
- 
- 
- 
- 
-</div>
-
-
-
-<!--周边酒店-->
- <div class="Cont_leftj">
- <h3>CHINA HOTEL hotel recommendations</h3>
- <ul>
-  <li><span>1.</span>
-<!-- <a href="/Chongqing-Hotels.html" title="Chongqing">Chongq</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-10212.html" title="Yihao Hotel">Yihao Hotel</a></li>
-  <li><span>2.</span>
-<!-- <a href="/Jinan-Hotels.html" title="Jinan">Jinan</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-19371.html" title="Hongteng Three Halls Commercial Hotel (Exhibition Center Branch)">Hongteng Thre</a></li>
-  <li><span>3.</span>
-<!-- <a href="/Shanghai-Hotels.html" title="Shanghai">Shangh</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-2865.html" title="Pudong Conference Exhibition Hotel">Pudong Confere</a></li>
-  <li><span>4.</span>
-<!-- <a href="/Harbin-Hotels.html" title="Harbin">Harbin</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-15037.html" title="Shihua Hotel">Shihua Hotel</a></li>
-  <li><span>5.</span>
-<!-- <a href="/Hulunbeier-Hotels.html" title="Hulunbeier">Hulunb</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-29932.html" title="9 Ju (hai la er san zhong dian)">9 Ju (hai la</a></li>
-  <li><span>6.</span>
-<!-- <a href="/Suzhou-Hotels.html" title="Suzhou">Suzhou</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-11611.html" title="Pod Inn (Suzhou South Bus Station)">Pod Inn (Suzh</a></li>
-  <li><span>7.</span>
-<!-- <a href="/Tianjin-Hotels.html" title="Tianjin">Tianji</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-4603.html" title="Nanyuan China Inns Tianjin Bohai Branch">Nanyuan China</a></li>
-  <li><span>8.</span>
-<!-- <a href="/Deyang-Hotels.html" title="Deyang">Deyang</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-22185.html" title="the Tianyun Sunshine Business Hotel">the Tianyun S</a></li>
-  <li><span>9.</span>
-<!-- <a href="/Xian-Hotels.html" title="Xian">Xian</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-6288.html" title="Ramada Xi'an Bell Tower">Ramada Xi'an </a></li>
-  <li><span>10.</span>
-<!-- <a href="/Wenzhou-Hotels.html" title="Wenzhou">Wenzho</a> -->&nbsp;
- <a href="http://www.chinahotel.com.cn/Hotels-5783.html" title="City Inn Bandao Hotel">City Inn Band</a></li>
-  </ul>
-</div>
-<!--周边酒店结束-->
-
-<!--周边景点开始-->
-
- <div class="Cont_leftj">
- <h3>CHINA HOTEL Attractions</h3>
- <ul>
- 
-  <li><span>1.</span>
- <!-- <a href="/Huangshan-Attractions.html" title="Huangshan">Huangs</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-2131.html" title="Former Residence of Wang Jiaxiang">
- Former Residen</a></li>
-  <li><span>2.</span>
- <!-- <a href="/Shandong-Attractions.html" title="Shandong">Shando</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-456.html" title="Braised Intestines in Brown Sauce">
- Braised Intest</a></li>
-  <li><span>3.</span>
- <!-- <a href="/Beijing-Attractions.html" title="Beijing">Beijin</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-724.html" title="Western Han Tombs at Dabaotai">
- Western Han T</a></li>
-  <li><span>4.</span>
- <!-- <a href="/Beijing-Attractions.html" title="Beijing">Beijin</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-709.html" title="Great Bell Temple,">
- Great Bell Te</a></li>
-  <li><span>5.</span>
- <!-- <a href="/Beijing-Attractions.html" title="Beijing">Beijin</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-673.html" title="Yuetan Park">
- Yuetan Park</a></li>
-  <li><span>6.</span>
- <!-- <a href="/Jinzhong-Attractions.html" title="Jinzhong">Jinzho</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-1906.html" title="Jingxin Temple">
- Jingxin Templ</a></li>
-  <li><span>7.</span>
- <!-- <a href="/Jiuzhaigou-Attractions.html" title="Jiuzhaigou">Jiuzha</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-1377.html" title="Fairy Pool">
- Fairy Pool</a></li>
-  <li><span>8.</span>
- <!-- <a href="/Chenzhou-Attractions.html" title="Chenzhou">Chenzh</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-1385.html" title="Yangtian Lake">
- Yangtian Lake</a></li>
-  <li><span>9.</span>
- <!-- <a href="/Hangzhou-Attractions.html" title="Hangzhou">Hangzh</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-1012.html" title="Enjoying tea at dragon well">
- Enjoying tea </a></li>
-  <li><span>10.</span>
- <!-- <a href="/Nanjing-Attractions.html" title="Nanjing">Nanjin</a>&nbsp; -->
- <a href="http://www.chinahotel.com.cn/Attractions-1682.html" title="Zijin Hill Observatory">
- Zijin Hill Ob</a></li>
-  </ul>
-</div>
-<!--周边景点结束-->
-
-
-
-
-
-
-</div>
-  <!--左边栏  结束 -->
-
-
-    <!--右边栏  结束 -->
-   <div class="Cont_rignav">
-
-      <div class="breadCrumb"><a href="http://www.chinahotel.com.cn/ChinaHotels.html">China Hotels</a> 
-	  	  &gt; <a href="#" onclick="return false;">CHINA HOTEL Hotels</a>
-	  </div>
-       
-       <h1>CHINA HOTEL Hotels<span>
-	   <a href="javascript:iniCity('frmInputcity','HotCitiesFrame','frmInputcity');">Other Cities</a><img src="chinahotels_list.php_files/down_01.gif" alt=""></span></h1>
-       <p id="frmInputcity" class="cont_rig_topnote">Chinahotel offers 
-the best selection of hotels in CHINA HOTEL. Find a cheap hotel in CHINA
- HOTEL and save with Chinahotel low hotel rates. Plus, your hotel 
-reservations are protected by the Chinahotel Best Price Guarantee</p>
-     <iframe id="HotCitiesFrame" class="frmahotcity" name="HotCitiesFrame" marginheight="0" marginwidth="0" src="chinahotels_list.php_files/topcities.htm" style="display: none;" frameborder="0" scrolling="no"></iframe>
-     
-     
-     <!--HotelList Demo Star-->
-      <div class="cont_hwarp">
-      <!--HotelMID Star-->
-      <div class="cont_hmid">
-         
-        <div class="cont_hmid_search">
-		<form method="post" name="searform">
-        <h2>CHINA HOTEL accommodation</h2>
-        <p>
-        <em>CheckIN <input name="str_date" id="str_date" value="2012-11-02" onclick="return showCalendar('str_date', 'y-mm-dd');" type="text"> </em>
-        <em>OUT <input name="end_date" id="end_date" value="2012-11-03" onclick="return showCalendar('end_date', 'y-mm-dd');" type="text"> </em>
-        <em>Rooms   <select name="textarea">
-                    <option selected="selected">1</option> <option>2</option> <option>3</option><option>4</option><option>5</option>
-                    </select> 
-        </em>
-         <span><a href="javascript:dosear();">Search</a></span>
-        </p>
-        <div class="clear height5"> </div>
-		</form>
-        </div>
-      
-      
-      
-       <div class="cont_hmid_hotelinfo">
-        <div class="cont_hmidtop">
-        <h2>FEATURED HOTELS IN CHINA HOTEL</h2>
-        <p>CHINA HOTELHotels:		<a href="javascript:setCookie('order_by',1);">Hotel Price<img src="chinahotels_list.php_files/hl_up.gif" title="s" alt=""></a><a href="javascript:setCookie('order_by',2);">Hotel Price<img src="chinahotels_list.php_files/hl_down.gif" title="s" alt=""></a> <a href="javascript:setCookie('order_by',3);">popular<img src="chinahotels_list.php_files/hl_down.gif" title="s" alt=""></a>
-		</p>
-		
-        </div>
-       	   
-       <ul>
-	           <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/9954_1_1s.jpg" alt="Xinrujia Chain Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-9954.html"><b>Xinrujia Chain Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=112&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Xiamen-Hotels.html">Xiamen</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=112&amp;sys_loc3=665">Siming  </a></span></p>
-          <p class="Hotellocation">Hotel location:108 Evergreen Road, Siming District, Xiamen </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-9954.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/13620_1_1s.jpg" alt="Weixiao Rujia Business Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-13620.html"><b>Weixiao Rujia Business Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=16&amp;sys_loc2=173&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Qingdao-Hotels.html">Qingdao</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=16&amp;sys_loc2=173&amp;sys_loc3=961">Shinan  </a></span></p>
-          <p class="Hotellocation">Hotel location:No.39 Feicheng Road </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-13620.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/14787_1_1s.jpg" alt="Nanjing Rujia Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-14787.html"><b>Nanjing Rujia Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=9&amp;sys_loc2=75&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Nanjing-Hotels.html">Nanjing</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=9&amp;sys_loc2=75&amp;sys_loc3=534">Qinhuai  </a></span></p>
-          <p class="Hotellocation">Hotel location:No.106 Jiankang Road </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-14787.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/nopic_s.jpg" alt="Rujia Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-16087.html"><b>Rujia Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=105&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Longyan-Hotels.html">Longyan</a>、<a href="http://www.chinahotel.com.cn/Longyan-Hotels.html"> </a></span></p>
-          <p class="Hotellocation">Hotel location:Ping Wu, Yan Longyan Xinfeng Street, the former Town </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-16087.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/16279_1_1s.jpg" alt="Xinrujia Hotel (Zhangzhou Yunxiao)"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-16279.html"><b>Xinrujia Hotel (Zhangzhou Yunxiao)</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=113&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Zhangzhou-Hotels.html">Zhangzhou</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=113&amp;sys_loc3=2310">Yunxiao County </a></span></p>
-          <p class="Hotellocation">Hotel location:Zhangzhou Yunxiao County Pu political 96 </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-16279.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/16280_1_1s.jpg" alt="Xinrujia Chain Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-16280.html"><b>Xinrujia Chain Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=113&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Zhangzhou-Hotels.html">Zhangzhou</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=10&amp;sys_loc2=113&amp;sys_loc3=673">Xiangcheng 　 </a></span></p>
-          <p class="Hotellocation">Hotel location:51 Road Building, North Yan'an Road (Yan'an Bei Lu) </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-16280.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">Situated in central business and 
-entertainment center,  near bus station,  the Xinrujia Chain Hotel 
-(Xinrujia Jiudian) is 20-minute..</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/nopic_s.jpg" alt="Hengdian Rujia Business Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-17636.html"><b>Hengdian Rujia Business Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=8&amp;sys_loc2=596&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Hengdian-Hotels.html">Hengdian</a>、<a href="http://www.chinahotel.com.cn/Hengdian-Hotels.html"> </a></span></p>
-          <p class="Hotellocation">Hotel location:shopkeeper magnetic circuit 32 </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-17636.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/18930_1_1s.jpg" alt="Yangzhou Rujia Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-18930.html"><b>Yangzhou Rujia Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=9&amp;sys_loc2=95&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Yangzhou-Hotels.html">Yangzhou</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=9&amp;sys_loc2=95&amp;sys_loc3=631">Weiyang  </a></span></p>
-          <p class="Hotellocation">Hotel location:196 Weiyang Road (Weiyang Lu) </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-18930.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">Located at the intersection of Weiyang 
-Road and Wenhui Road,  the Yangzhou Rujia Hotel (Yangzhou Rujia Binguan)
- is convenient to th..</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/20143_1_1s.jpg" alt="Luse Rujia Express Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-20143.html"><b>Luse Rujia Express Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=16&amp;sys_loc2=178&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Weihai-Hotels.html">Weihai</a>、<a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=16&amp;sys_loc2=178&amp;sys_loc3=979">High Technology Industry Development  </a></span></p>
-          <p class="Hotellocation">Hotel location:4-6 New Gulangyu Garden, emperor palace </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-20143.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">Located near the sea,  the Luse Rujia 
-Express Hotel (Lvse Rujia Kuaijie Binguan) is a 30-minute drive from 
-Weihai Railway Station...</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/nopic_s.jpg" alt="moxianrujiashanwu hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-20541.html"><b>moxianrujiashanwu hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=16&amp;sys_loc2=523&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Tengzhou-Hotels.html">Tengzhou</a>、<a href="http://www.chinahotel.com.cn/Tengzhou-Hotels.html"> </a></span></p>
-          <p class="Hotellocation">Hotel location:the Tengzhou Shanguo North Road (opposite the test primary school) </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-20541.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/nopic_s.jpg" alt="zhunhuarujia hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-27437.html"><b>zhunhuarujia hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=19&amp;sys_loc2=399&amp;star=5"><img src="chinahotels_list.php_files/star5.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Zunhua-Hotels.html">Zunhua</a>、<a href="http://www.chinahotel.com.cn/Zunhua-Hotels.html"> </a></span></p>
-          <p class="Hotellocation">Hotel location:zunhua North Second Ring Road </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-27437.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">---</p>
-        </li> 
-		        <li>
-         <div class="hotel_lefinfo">
-          <div class="hotel_lefimg"><img src="chinahotels_list.php_files/29841_1_1s.jpg" alt="Manzhouli Jurujia Hotel"></div>
-          <div class="hotel_leftit">
-          <p><a href="http://www.chinahotel.com.cn/Hotels-29841.html"><b>Manzhouli Jurujia Hotel</b></a></p>
-          <p><span>Hotel class:		  <a href="http://www.chinahotel.com.cn/chinahotels_list.php?sys_loc1=33&amp;sys_loc2=499&amp;star=7"><img src="chinahotels_list.php_files/star7.gif" alt=""></a></span>
-		  <br>		  <span>Hotel Area:<a href="http://www.chinahotel.com.cn/Manzhouli-Hotels.html">Manzhouli</a>、<a href="http://www.chinahotel.com.cn/Manzhouli-Hotels.html"> </a></span></p>
-          <p class="Hotellocation">Hotel location:East side, 5F, Sandao Street Kou'an Shopping Center (Sandaojie Kou'an Gouwu Zhongxin) </p>
-          </div>
-                   
-          <div class="clear"></div>
-         </div>
-         <div class="hotel_riginfo">
-          
-          <p class="hotel_price"><b>CNY: -</b></p>
-          <p class="hotel_booking"><a href="http://www.chinahotel.com.cn/Hotels-29841.html">Book Now</a></p>         
-         </div>
-         <div class="clear"></div>
-         <p class="hotel_dinfo">The Manzhouli Jurujia Hotel (Manzhouli 
-Jurujia Binguan) is located in the bustling downtown area of Manzhouli, 
- close to a parking ..</p>
-        </li> 
-		       
-      
-      </ul>
-       </div>
-      
-      
-      
-        <div class="page">
-        <em>page 1of 1</em>
+</head>
+<body>
+<div class="top">
+    <div>
+        <h2>Welcome to Chinahotel.com</h2>
         <ul>
-		 <li><a href="#" onclick="return false;" class="chot">1</a></li>       
-        
+            <li>
+         <span>
+         <img src="Search_files/SCn_L.gif" id="lanview" alt="cn.chinahotel.com" title="cn.chinahotel.com"
+              onclick="ChangeLanguage('cn');" style="cursor: pointer;">
+
+         </span>
+
+
+                <div id="loginState" style=" display:inline;"><a
+                        href="http://www.chinahotel.com/Register.html">Register</a> <a
+                        href="http://www.chinahotel.com/login.html">Login in</a></div>
+                <div id="landiv" style="display:none;">
+                    <ul>
+                        <li><img src="Search_files/En_L.gif" alt="www.chinahotel.com" title="www.chinahotel.com"
+                                 onclick="ChangeLanguage('www');" style="cursor: pointer;"></li>
+                        <li><img src="Search_files/BCn_L.gif" alt="big5.chinahotel.com" title="big5.chinahotel.com"
+                                 onclick="ChangeLanguage('big5');" style="cursor: pointer;"></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
-        </div>
-      
-      </div>  
-     <!--HotelMID End-->
-     
-      <!--HotelRig End-->
-      <div class="cont_hrig">
-       
-       <div class="hotel_map">
-       <h3>Show all area hotels on a map</h3>
-       <p class="hotel_mapinfo">Map of CHINA HOTEL will help you find more hotels around for your travel or business trip</p>
-       
-	  <div id="map" class="hotels_th_htmcon" style="width: 228px; height: 170px; overflow: hidden; position: relative; z-index: 0; background-image: url(&quot;http://api.map.baidu.com/images/bg.png&quot;); color: rgb(0, 0, 0); text-align: left;"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: -moz-grab;" id="platform"><div style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; width: 228px; height: 170px;" class=" BMap_mask" id="mask"></div><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 200;"><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 800;"></div><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 700;"><span title="" class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0pt; margin: 0pt; border: 0pt none; -moz-user-select: none; cursor: pointer; background: url(&quot;http://api.map.baidu.com/images/blank.gif&quot;) repeat scroll 0% 0% transparent; width: 23px; height: 25px; left: 104px; top: 60px; z-index: -4899568;"></span></div><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 600;"></div><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 500;"><label style="position: absolute; -moz-user-select: none; display: inline; cursor: inherit; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 0, 0); padding: 1px; white-space: nowrap; font: 12px arial,simsun; z-index: -4899568; left: 44px; top: 42px;" unselectable="on" class=" BMapLabel">Xinrujia Chain Hotel</label></div><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0pt; margin: 0pt; border: 0pt none; width: 0pt; height: 0pt; -moz-user-select: none; left: 114px; top: 85px; z-index: -4899568;"><div style="position: absolute; margin: 0pt; padding: 0pt; width: 23px; height: 25px; left: -10px; top: -25px; overflow: hidden;"><img src="chinahotels_list.php_files/markers.png" style="border: medium none; left: 0px; top: -250px; position: absolute;"></div></span></div><div style="position: absolute; height: 0pt; width: 0pt; left: 0pt; top: 0pt; z-index: 200;"></div></div><div style="position: absolute; z-index: -1; left: 114px; top: 85px;"><img src="chinahotels_list.php_files/ux6420.png" style="-moz-user-select: none; position: absolute; border: medium none; width: 256px; height: 256px; left: -307px; top: -157px;"><img src="chinahotels_list.php_files/ux6421.png" style="-moz-user-select: none; position: absolute; border: medium none; width: 256px; height: 256px; left: -51px; top: -157px;"></div></div><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:-moz-grab"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div class=" anchorBL" style="height: 32px; position: absolute; z-index: 10; -moz-user-select: none; bottom: 0px; right: auto; top: auto; left: 1px;"><a style="outline: medium none;" href="http://map.baidu.com/?sr=1" target="_blank" title="到百度地图首页"><img style="border: medium none; width: 77px; height: 32px;" src="chinahotels_list.php_files/copyright_logo.png"></a></div><div style="cursor: default; white-space: nowrap; -moz-user-select: none; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10;" class=" BMap_cpyCtrl anchorBL" unselectable="on"><span style="-webkit-text-size-adjust:none;color:#000;background:none;line-height:15px;font:11px arial,simsun" _cid="1">© 2012 Baidu</span></div></div>
-       <p class="hotel_maplink"> <a href="http://www.chinahotel.com.cn/chinahotels_hotel_map.php">More HOTELS ON MAP</a> </p>
-      </div>
-      
-	  
-	  
-	  <!--热门城市酒店列表-->
-       <div class="hotel_loc">
-       <h3>Hotels in other popular destinations</h3>
-       <p class="hotel_locinfo">To find more hotel deals and book discount hotels in China Hotel。</p>
-       <ul>
-	      <li><a target="_blank" href="http://www.chinahotel.com.cn/Shanghai-Hotels.html">Shanghai Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Beijing-Hotels.html">Beijing Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Guangzhou-Hotels.html">Guangzhou Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Shenzhen-Hotels.html">Shenzhen Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Dalian-Hotels.html">Dalian Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Suzhou-Hotels.html">Suzhou Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Hangzhou-Hotels.html">Hangzhou Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Xian-Hotels.html">Xian Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Tianjin-Hotels.html">Tianjin Hotels</a>  </li>
-       <li><a target="_blank" href="http://www.chinahotel.com.cn/Xiamen-Hotels.html">Xiamen Hotels</a>  </li>
-           </ul>
-       <p class="hotel_loclink"><a href="http://www.chinahotel.com.cn/ChinaHotels.html">More ChinaHotels</a></p>
-       <div class=" clear"></div>
-      </div>
-      <!--热门城市酒店列表结束-->
-	  
-	  
-      <!--右边推荐景点开始-->
-	         <div class="hotel_srank">
-       <h3>Near CHINA HOTEL attractions</h3>
-       <p class="hotel_srankloc">We will provide you more detailed information of the attractions around CHINA HOTEL recommended.</p>
-       <ul>
-	           <li>
-        <p><span class="hotel_snum_1">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-1597.html"><b>Grand Sight of Bamboo</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Zhaoqing-Attractions.html">Zhaoqing</a></span></p>
-        <p class="hotel_srankinfo">IntroductionBeing the biggest area of bamboo of China, Guangning Bamboo Scen..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_2">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-153.html"><b>Dong'ao Island</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Zhuhai-Attractions.html">Zhuhai</a></span></p>
-        <p class="hotel_srankinfo"></p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_3">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-1661.html"><b>Nanshan Mountian Zhuhai</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Liyang-Attractions.html">Liyang</a></span></p>
-        <p class="hotel_srankinfo">IntroductionNanshan Mountian Zhuhai Tourist spot located in the mountain are..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_4">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-1799.html"><b>Chang Family's Compound</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Taiyuan-Attractions.html">Taiyuan</a></span></p>
-        <p class="hotel_srankinfo">Introduction:Chang Family's Compound is located in the southwest of Don..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_5">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-1039.html"><b>Luzhai Ancient Building Group</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Dongyang-Attractions.html">Dongyang</a></span></p>
-        <p class="hotel_srankinfo">IntroductionIt is a major state-level protected monuments and long noted for..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_6">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-2279.html"><b>Zengshan temple</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Jiu%27anshan-Attractions.html">Jiu'anshan</a></span></p>
-        <p class="hotel_srankinfo">Introduction:Zeng shan is 7.5 kilometers away from the east of Dangtu count..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_7">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-1613.html"><b>Subuya Stone Forest</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Enshi-Attractions.html">Enshi</a></span></p>
-        <p class="hotel_srankinfo">IntroductionThe Subuya Stone Forest,&nbsp;3A scenic spot,&nbsp;is 54km away..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_8">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-1335.html"><b>Rain Collapsing Village</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Shangri-la-Attractions.html">Shangri-la</a></span></p>
-        <p class="hotel_srankinfo">Introduction:Rain Collapsing Village has two part that are the up o­ne ..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_9">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-106.html"><b>Quanzhou Chongwu Ancient Town</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Quanzhou-Attractions.html">Quanzhou</a></span></p>
-        <p class="hotel_srankinfo">Chongwu is theÂ division of the East Chinese Sea and the South Chinese Sea..</p>
-        </li> 
-                <li>
-        <p><span class="hotel_snum_10">&nbsp; </span><a href="http://www.chinahotel.com.cn/Attractions-949.html"><b>Geziwo Park</b></a></p>
-        <p><span>Area:		<a href="http://www.chinahotel.com.cn/Qinhuangdao-Attractions.html">Qinhuangdao</a></span></p>
-        <p class="hotel_srankinfo">IntroductionGeziwo Park is also named Eagle’s Horn Park, because of a huge..</p>
-        </li> 
-         
-       </ul>
-         <p class="hotel_loclink"><a href="http://www.chinahotel.com.cn/China-Attractions.html">More CHINA HOTEL attractions</a></p>
-       <div class=" clear"></div>
-      </div>
-      <!--右边推荐景点结束-->
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      </div> 
-      <!--HotelRig End-->
-      <div class="clear"></div>
-      </div>
-     <!--HotelList Demo End--> 
-
-
-
     </div>
 
-    <!--右边栏  结束 -->
- 
 
-    
-  <div class="clear"></div>
-  </div>
- <!--Demo  End -->
-<div class="foot">
-    
-  <span>
-   <a href="http://www.chinahotel.com.cn/ChinaHotels.html">China Hotels</a> | 
-   <a href="http://www.chinahotel.com.cn/China-Attractions.html">Spots in China</a> | 
-   <a href="http://www.chinahotel.com.cn/chinahotels_hotel_map.php">Hotel Maps</a>|
-   <a href="http://www.chinahotel.com.cn/chinahotels_tehui.php">Promotion</a> | 
-   <a href="http://www.chinahotel.com.cn/expo/">Expo Shanghai</a>  |
-   <a href="http://www.ezhotel.com.tw/">Taiwan hotels</a>
-  |<a href="http://www.chinahotel.com.cn/Sitemap_Hotels.html">China Reservation</a>
-  |<a href="http://www.chinahotel.com.cn/Sitemap_Scenerys.html">Attractions</a>
-  |<a href="http://www.chinahotel.com.cn/Sitemap_Citys.html">China Tourist</a>
+</div>
 
-  </span><br>
-  
- <b>Contact Chinahotel</b>: <a href="mailto:chinahotel@chinahotelbooking.net">chinahotel@chinahotelbooking.net</a>,
- <b>Fax</b>:(+86 0592) 5199892 <b>Phone:</b> 4008899093| (+86 0592) 5199895 | 5199101 | 5199891<br>
- Copyright 2004-2011 <a href="http://www.surehigh.com.tw/">SUREHIGH TECHNOLOGIES</a> Co.Ltd China Hotel Booking ICP 05014255,Shanghai,China  <script src="chinahotels_list.php_files/stat.php" language="JavaScript"></script><script src="chinahotels_list.php_files/cnzz_core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=4231269" target="_blank" title="站长统计"><img src="chinahotels_list.php_files/pic.gif" hspace="0" vspace="0" border="0"></a>
-  
+<script src="Search_files/LoginState.js" type="text/javascript"></script>
+<div id="head">
+    <em><a href="http://www.chinahotel.com/index.html"><img src="Search_files/logo.gif" alt="ChinaHotel.com"
+                                                            title="ChinaHotel.com"></a></em>
+    <ul>
+        <li class="nav_r"></li>
+        <li><a href="http://www.chinahotel.com/HongKong-Hotels/">HongKong Hotels</a></li>
+        <li><a href="http://www.chinahotel.com/Guangzhou-Hotels/">Guangzhou Hotels</a></li>
+        <li><a href="http://www.chinahotel.com/Shanghai-Hotels/">Shanghai Hotels</a></li>
+        <li><a href="http://www.chinahotel.com/Beijing-Hotels/">Beijing Hotels</a></li>
+        <li><a href="http://www.chinahotel.com/AdvancedSearch.html">China Hotels</a></li>
+        <li><a href="http://www.chinahotel.com/index.html">Home</a></li>
+    </ul>
+    <div class="clear"></div>
 </div>
+
+
+<script src="Search_files/EN_timeControl.js"></script>
+
+<script src="Search_files/jquery.js" type="text/javascript"></script>
+<script src="Search_files/keywordAutocomplete.js" type="text/javascript"></script>
+<script src="Search_files/jquery_003.js"></script>
+<script src="Search_files/Search.js"></script>
+
+<div class="page-nav"><span>You are here:</span> <a href="http://www.chinahotel.com/index.html">Home</a> &gt; Hotel
+    Search
 </div>
-<script>
-function dosear(){
-	document.searform.submit();
-}
+
+<a name="atop" id="atop"></a>
+
+<div id="content">
+    <div id="left">
+        <div class="search_1">
+
+            <form id="kform" method="post" action="Search.html">
+                <ul id="SearchUl">
+
+                    <li><input id="keytype" name="keytype" value="hotels" type="hidden">
+                        <input id="keyvalue" name="keyvalue" value="9442" type="hidden"><input autocomplete="off"
+                                                                                               class="search_1_search_input ac_input"
+                                                                                               id="keyword"
+                                                                                               name="keyword"
+                                                                                               value="Yangzhou Rujia Hotel"
+                                                                                               type="text">
+                        <a href="javascript:SubmitForm();"><img src="Search_files/search_button_2.gif" alt="Search"
+                                                                title="Search" class="search_1_search_img"></a></li>
+                    <li>
+          <span>Check-in:<input class="search_1_date_input" value="2012-12-04" name="Checkin" id="Checkin"
+                                onclick='showCalendar("Checkin",false,"Checkin"),cancelBubble(event);'
+                                readonly="readonly" type="text">
+          <iframe class="iframecal" id="CalFrame" name="CalFrame" marginheight="0" marginwidth="0"
+                  src="Search_files/EN_calendar.htm" frameborder="0" height="200" scrolling="no" width="304"></iframe>
+                Check-out:<input class="search_1_date_input" value="2012-12-05" id="Checkout" name="Checkout"
+                                 onclick='showCalendar("Checkout",false,"Checkout"),cancelBubble(event);'
+                                 readonly="readonly" type="text">
+
+          </span>
+                    </li>
+                    <li>
+                        <span><b>District:</b><a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1451&amp;keyword=Guangling">Guangling</a>  <a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1452&amp;keyword=Hanjiang">Hanjiang</a>  <a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1453&amp;keyword=Weiyang">Weiyang</a>  <a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1454&amp;keyword=Wenhe">Wenhe</a>  </span>
+                    </li>
+                    <li>
+                        <span><b>Commercial:</b><a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1455&amp;keyword=City%20Center">City
+                            Center</a>  <a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1456&amp;keyword=Slender%20West%20Lake%20area">Slender
+                            West Lake area</a>   <a onclick="javascript:$('#more_com').show();$('#more_dis').hide();"
+                                                    style="cursor: pointer;"><font
+                                color="red">more&gt;&gt;&gt;</font></a> <div id="more_com" class="morePanel"><a
+                                onclick="javascript:$('#more_com').hide();" title="Close" style="cursor: pointer;"><img
+                                src="Search_files/xx.htm"></a><a
+                                href="http://www.chinahotel.com/Search.html?keytype=area&amp;keyvalue=1457&amp;keyword=Yangzhou%20New%20Area">Yangzhou
+                            New Area</a></div></span>
+                    </li>
+                    <li>
+                        <span>Hotel Keywords:<input id="rekey" class="search_1_input_t" value="Search in results..."
+                                                    onclick="if(this.value=='Search in results...') this.value='';"
+                                                    type="text"> <input class="search_1_btn" value="Go"
+                                                                        onclick="SearchGrep();" type="button"></span>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div class="tab">
+            <strong>List View</strong><a href="http://www.chinahotel.com/Maps/Yangzhou-hotels.htm" target="_blank">Map
+            View</a>
+            <span>Results for your search (<em id="hcount">1</em> hotels found)</span>
+        </div>
+
+        <div>
+            <ul class="sort">
+                <li>Sort by:</li>
+                <li><a href="javascript:SortPop()" id="pop">Popularity</a></li>
+                <li><a href="javascript:SortPrice()" id="price">Price</a></li>
+                <li><a href="javascript:SortRating()" id="rating">Hotel Rating</a></li>
+            </ul>
+
+            <div class="clear"></div>
+        </div>
+
+        <!-- 列表 开始 -->
+        <table border="1">
+
+                <tr>
+                    <td>酒店名称</td>
+                    <td>酒店位置</td>
+                    <td>剩余房间数</td>
+                    <td>房间价格</td>
+                    <td>星级</td>
+                    <td>评分</td>
+                    <td>email</td>
+                    <td>电话</td>
+
+                </tr>
+             <c:forEach items="${page.list}" var="hotel">
+                 <tr>
+                     <td>${hotel.brand.name.chs}</td>
+                     <td>${hotel.address.chs}</td>
+                     <td>3</td>
+                     <td></td> <%--TODO hotel持有roomList--%>
+                     <td>${hotel.brand.level}</td>
+                     <td>${hotel.brand.score}</td>
+                     <td>${hotel.email}</td>
+                     <td>${hotel.tel}</td>
+                 </tr>
+
+             </c:forEach>
+
+        </table>
+
+
+
+        <%--<div id="Searchresult">
+            <div class="result">
+                <div class="hotelslist">
+                    <ul class="hl-u1">
+                        <li class="hl-name"><a
+                                href="http://www.chinahotel.com/Yangzhou-Rujia_Hotel-Yangzhou.html?checkin=2012-12-04&amp;checkout=2012-12-05">Yangzhou
+                            Rujia Hotel</a></li>
+                        <li class="hl-location"><span><strong>Location: </strong>City Center</span>[<a
+                                href="http://www.chinahotel.com/Maps/9442.html" target="_blank">Map</a>]
+                        </li>
+                        <li class="hl-info"><span><strong>Opened: </strong>2006</span><span><strong>Number of
+                            rooms: </strong>69</span></li>
+                    </ul>
+                    <ul class="hl-u3">
+                        <li class="hl-price"><em>Lowest:</em><a
+                                href="http://www.chinahotel.com/hotels/9442.html?checkin=2012-12-04&amp;checkout=2012-12-05">CNY
+                            <strong>118</strong></a></li>
+                    </ul>
+                    <ul class="hl-u2">
+                        <li><span><div style="width: 0px;"></div></span>0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="hiddenresult" style="display: none;">
+            <div class="result">
+                <div class="hotelslist">
+                    <ul class="hl-u1">
+                        <li class="hl-name"><a
+                                href="http://www.chinahotel.com/Yangzhou-Rujia_Hotel-Yangzhou.html?checkin=2012-12-04&amp;checkout=2012-12-05">Yangzhou
+                            Rujia Hotel</a></li>
+                        <li class="hl-location"><span><strong>Location: </strong>City Center</span>[<a
+                                href="http://www.chinahotel.com/Maps/9442.html" target="_blank">Map</a>]
+                        </li>
+                        <li class="hl-info"><span><strong>Opened: </strong>2006</span><span><strong>Number of
+                            rooms: </strong>69</span></li>
+                    </ul>
+                    <ul class="hl-u3">
+                        <li class="hl-price"><em>Lowest:</em><a
+                                href="http://www.chinahotel.com/hotels/9442.html?checkin=2012-12-04&amp;checkout=2012-12-05">CNY
+                            <strong>118</strong></a></li>
+                    </ul>
+                    <ul class="hl-u2">
+                        <li><span><div style="width:0px"></div></span>0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>--%>
+        <!-- 列表 结束 -->
+
+        <div>
+            <div id="Pagination" class="pagination"><span class="current prev">Prev</span><span class="current">1</span><span
+                    class="current next">Next</span></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="right">
+        <div class="time">
+            <h2>Beijing Time(GMT+8)</h2>
+
+            <h3>2012-12-04 20:14:14</h3>
+            <h4>Tuesday</h4>
+        </div>
+        <div class="line_1"></div>
+        <div class="filter">
+            <dl>
+                <dt>Star rating</dt>
+
+                <dd><input id="5st" name="star" value="5" onclick="FilterList();" type="checkbox"><label for="5st">5-star</label>
+                </dd>
+                <dd><input id="4st" name="star" value="4" onclick="FilterList();" type="checkbox"><label for="4st">4-star</label>
+                </dd>
+                <dd><input id="3st" name="star" value="3" onclick="FilterList();" type="checkbox"><label for="3st">3-star
+                    and down</label></dd>
+            </dl>
+        </div>
+        <div class="filter">
+            <dl>
+                <dt>Price</dt>
+
+                <dd><input id="1p" name="price" value="0-300" onclick="FilterList();" type="checkbox"><label for="1p">0
+                    ~ 300</label></dd>
+                <dd><input id="2p" name="price" value="300-500" onclick="FilterList();" type="checkbox"><label for="2p">300
+                    ~ 500</label></dd>
+                <dd><input id="3p" name="price" value="500-800" onclick="FilterList();" type="checkbox"><label for="3p">500
+                    ~ 800</label></dd>
+                <dd><input id="4p" name="price" value="800-1500" onclick="FilterList();" type="checkbox"><label
+                        for="4p">800 ~ 1500</label></dd>
+                <dd><input id="5p" name="price" value="1500-1000000" onclick="FilterList();" type="checkbox"><label
+                        for="5p">1500+</label></dd>
+
+            </dl>
+        </div>
+        <div class="filter">
+            <dl>
+                <dt>Amenities</dt>
+
+
+                <dd><input id="1s" name="Amenities" value="pick-up service" onclick="FilterList();"
+                           type="checkbox"><label for="1s">Airport shuttle</label></dd>
+                <dd><input id="2s" name="Amenities" value="net" onclick="FilterList();" type="checkbox"><label for="2s">Internet</label>
+                </dd>
+                <dd><input id="3s" name="Amenities" value="park place" onclick="FilterList();" type="checkbox"><label
+                        for="3s">Parking</label></dd>
+                <dd><input id="4s" name="Amenities" value="fitness" onclick="FilterList();" type="checkbox"><label
+                        for="4s">Fitness Room</label></dd>
+                <dd><input id="5s" name="Amenities" value="swimming pool" onclick="FilterList();" type="checkbox"><label
+                        for="5s">Swinmming Pool</label></dd>
+                <dd><input id="6s" name="Amenities" value="restaurant" onclick="FilterList();" type="checkbox"><label
+                        for="6s">Restaurant</label></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="wattingdiv" class="loading" style="position: absolute; top: 384px; left: 511.5px; display: none;">Watting
+    Search.....
+</div>
+
+<script type="text/javascript">
+
+    var json = [
+        {"HotelID":9442, "HotelName":"Yangzhou Rujia Hotel", "HotelUrlName":"Yangzhou-Rujia_Hotel-Yangzhou", "CommercialName":"City Center", "Rating":0, "SetUpYear":"2006", "RoomNumber":69, "LowPrice":118, "AreaID":250, "LandMarkString":"moring call service,ticket,safety box,conference,laudary,luggage,pulic area of wirless net,park place for free,express service", "CustomerScore":0.0, "Address":"No.196 Weiyang Road"}
+    ];
+
+
+    BindData(json);
+
+
 </script>
 
 
+<div id="footer">
+    <p><a><img src="Search_files/startssl.gif" alt="STARTSSL" title="STARTSSL"></a><a
+            href="http://www.chinahotel.com/Aboutus.html">About Chinahotel</a> <a
+            href="http://www.chinahotel.com/Contactus.html">Contact Us</a><a
+            href="http://www.chinahotel.com/sitemap.html">Sitemap</a><a href="http://www.chinahotel.com/Privacy.html">Privacy</a><a
+            href="http://www.chinahotel.com/Disclaimers.html">Terms of Use</a><a
+            href="http://www.chinahotel.com/Help.html">FAQ &amp; HELP</a><a
+            href="http://www.chinahotel.com/Feedback.html">Feedback</a></p>
 
-<script type="text/javascript" src="chinahotels_list.php_files/api"> </script><link rel="stylesheet" type="text/css" href="chinahotels_list.php_files/bmap.css"><script type="text/javascript" src="chinahotels_list.php_files/getscript"></script> 
+    <p>2010 © ChinaHotel,Inc. All Rights Reserved.</p>
+</div>
+
 <script type="text/javascript">
 
-var map = new BMap.Map("map"); // 创建地图实例 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3157859-13']);
+    _gaq.push(['_trackPageview']);
 
-var point = new BMap.Point(118.13269000000000000000, 24.49784600000000000000); // 创建点坐标 
-map.centerAndZoom(point, 15); // 初始化地图，设置中心点坐标和地图级别 
-window.map = map;//将map变量存储在全局
-var myIcon1 = new BMap.Icon("http://api.map.baidu.com/img/markers.png", new BMap.Size(23, 25), {
-    offset: new BMap.Size(10, 25),                  // 指定定位位置
-    imageOffset: new BMap.Size(0, 0 - 10 * 25)   // 设置图片偏移
-});
-var marker1 = new BMap.Marker(point, {icon: myIcon1});
-map.addOverlay(marker1);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
 
-var label1 = new BMap.Label("Xinrujia Chain Hotel",{point : point, 
-　　　　　　　 offset: new BMap.Size(-70,-43)}); //定义一个文字标签
-map.addOverlay(label1);
-
-map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-//map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-
-</script> 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script src="chinahotels_list.php_files/ga.js" type="text/javascript"></script>
-<script type="text/javascript">
-try{
-var pageTracker = _gat._getTracker("UA-373133-30");
-pageTracker._setDomainName("chinahotel.com.cn"); 
-pageTracker._initData();
-pageTracker._trackPageview();
-}catch(e){}
 </script>
 
- 
 
-<!-- Begin Comm100 Live Chat Button Code --><div style="position: absolute; left: 0px; top: 0px;" id="comm100_FloatImageButton_Abandon"><div><div id="comm100_LiveChatDiv"></div><a href="http://www.comm100.cn/livechat/" onclick="comm100_Chat();return false;" target="_blank" title="Live Chat Help" rel="nofollow"><img style="display: none;" id="comm100_ButtonImage_Abandon" src="chinahotels_list.php_files/BBS.gif" alt="Live Chat by comm100" border="0px"></a><script src="chinahotels_list.php_files/LiveChat.js" type="text/javascript"></script></div></div><!-- End Comm100 Live Chat Button Code -->
- 
-<!--�_ʼ BaiDuEn-->
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F238f9719ee61bb825241a94fead1d503' type='text/javascript'%3E%3C/script%3E"));
-</script><script src="chinahotels_list.php_files/h.js" type="text/javascript"></script>
-<!--�Y�� BaiDuEn-->
-
-
- 
-<script src="chinahotels_list.php_files/jquery.js" type="text/javascript"></script>
-<script type="text/javascript" src="chinahotels_list.php_files/chinahotels_list_js.htm"></script> 
-
-
-<div style="position: absolute; left: 0px; top: 0px; z-index: 7999; display: none;" id="comm100_invitationDiv"></div><iframe id="comm100_ifrInvitation" style="position: absolute; z-index: 7998; width: 0px; height: 0px; left: 0px; top: 0px; display: none;" src="javascript:''" frameborder="0"></iframe><div id="comm100_FloatImageButton" style="cursor: pointer; position: fixed; left: 1083px; top: 50px; z-index: 7997; background: url(&quot;http://hosted.comm100.cn/LiveChat/Images/CodePlan/ChatButton_online_green1.gif&quot;) no-repeat scroll 0% 0% transparent;" onclick="comm100_Chat();"><img id="comm100_ButtonImage" src="chinahotels_list.php_files/ChatButton_online_green1.gif" style="visibility: hidden;"></div></body></html>
+<div class="ac_results" style="display: none; width: 516px;"></div>
+</body>
+</html>

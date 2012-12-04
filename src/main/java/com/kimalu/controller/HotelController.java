@@ -1,5 +1,6 @@
 package com.kimalu.controller;
 
+import com.kimalu.dao.page.Page;
 import com.kimalu.domain.City;
 import com.kimalu.domain.Hotel;
 import com.kimalu.domain.Province;
@@ -30,11 +31,15 @@ public class HotelController extends BaseController {
     private ProvinceService provinceService;
 
     @RequestMapping(value = "/searchHotelByCityAndPinyin", method = RequestMethod.POST)
-    public String searchHotelByCityAndPinyin(String cityId, String hotelPinYin, ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException {
+    public String searchHotelByCityAndPinyin(String cityId, String hotelName, ModelMap modelMap) throws JsonGenerationException, JsonMappingException, IOException {
+        Page<Hotel> page=new Page<Hotel>();
+//        page.setPageNo(1);
+//        page.setPageSize(20);
+
         City city = cityService.getEntityById(cityId);
         List<Hotel> hotelList = new ArrayList<Hotel>();
-        hotelList.addAll(hotelService.getHotel(hotelPinYin, city));
-        modelMap.addAttribute("hotelList", hotelList);
+        hotelService.getHotel(page,hotelName, city);
+        modelMap.addAttribute("page", page);
         return "front/hotelList";
     }
 

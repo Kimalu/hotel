@@ -229,7 +229,7 @@
                                         <h3>您心中理想的酒店是？ （可选填）</h3>
 
                                         <p> 酒店名称:</p>
-                                        <input type="text" id="hotelPinyin" name="hotelPinyin" size="60"/>
+                                        <input type="text" id="hotelName" name="hotelName" size="60"/>
                                     </div>
                                     <div class='clear'></div>
                                     <div class="clear"></div>
